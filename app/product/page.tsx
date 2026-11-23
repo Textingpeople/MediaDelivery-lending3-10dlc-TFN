@@ -19,12 +19,12 @@ export default function ProductPage() {
             The Product
           </p>
           <h1 className="headline-xl text-white mb-8">
-            One platform for
+            Ready for
             <br />
-            <em className="italic-accent">every financial journey.</em>
+            <em className="italic-accent">every milestone.</em>
           </h1>
           <p style={{ color: 'rgba(245,243,235,0.65)', fontSize: '1.1rem', lineHeight: 1.8, maxWidth: '520px', margin: '0 auto 2.5rem' }}>
-            Verdant Finance brings together budgeting, goal planning, debt management, investing guidance, and AI-powered advice — all in one calm, unified experience.
+            FutureReady brings together benefits education, milestone planning and a Milestone Planner for educational guidance — all in one calm, unified experience.
           </p>
           <Link href="/talk-to-sales" className="btn-primary">
             Get Started
@@ -45,15 +45,15 @@ export default function ProductPage() {
             <h2 className="headline-lg" style={{ color: 'var(--forest)' }}>
               Everything employees need
               <br />
-              <em className="italic-accent">to feel financially secure.</em>
+              <em className="italic-accent">to get ready for what&apos;s next.</em>
             </h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
             {[
               {
-                title: 'AI Financial Advisor',
-                desc: 'Employees can ask Verdant AI anything — how to pay off debt faster, whether they can afford a home, how to build an emergency fund. They get personalized, actionable answers based on their actual financial situation.',
+                title: 'Milestone Planner',
+                desc: 'Employees can ask the Milestone Planner about their benefits and life milestones — what to know before a first home, how open enrollment works, what a career change means for their 401(k). It gives educational guidance, not investment, tax or legal advice.',
                 icon: (
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                     <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 5v6m0 4h.01" />
@@ -61,8 +61,8 @@ export default function ProductPage() {
                 ),
               },
               {
-                title: 'Financial Dashboard',
-                desc: 'A clear, calm view of net worth, spending, savings progress, and financial goals. Employees see exactly where they stand and what to do next — without feeling overwhelmed.',
+                title: 'Milestone Dashboard',
+                desc: 'A clear, calm view of the milestones an employee is preparing for and the benefit steps that matter for each. Employees see what to do next — without feeling overwhelmed.',
                 icon: (
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                     <rect x="3" y="3" width="7" height="7" rx="1" />
@@ -73,8 +73,8 @@ export default function ProductPage() {
                 ),
               },
               {
-                title: 'Goal Planning & Tracking',
-                desc: 'Set goals for emergency funds, debt payoff, home buying, retirement, and more. Verdant Finance builds a personalized plan and tracks progress automatically — adjusting as life changes.',
+                title: 'Milestone Plans',
+                desc: 'Step-by-step plans for a first home, student-loan payoff, growing a family, a career change or retirement readiness. Employees can revisit their plan as life changes.',
                 icon: (
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                     <path d="M9 11l3 3L22 4" />
@@ -83,8 +83,8 @@ export default function ProductPage() {
                 ),
               },
               {
-                title: 'Spending Insights',
-                desc: 'Automatic categorization of spending with clear trends and patterns. Employees understand where their money goes and get AI-powered suggestions for where to optimize.',
+                title: 'Open Enrollment Guidance',
+                desc: 'Plain-language explanations of medical, dental, HSA/FSA and other enrollment choices, with reminders of key dates so employees can choose with confidence.',
                 icon: (
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                     <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
@@ -93,8 +93,8 @@ export default function ProductPage() {
                 ),
               },
               {
-                title: 'Debt Management',
-                desc: 'Visualize all debt in one place — student loans, credit cards, auto loans. Get AI-generated payoff strategies (avalanche, snowball, or hybrid) tailored to each employee\'s situation.',
+                title: 'Student-Loan Payoff Planning',
+                desc: 'Educational guides to common student-loan payoff approaches, plus whether an employer student-loan benefit may be available, so employees can plan the road to payoff.',
                 icon: (
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                     <circle cx="12" cy="12" r="10" />
@@ -103,8 +103,8 @@ export default function ProductPage() {
                 ),
               },
               {
-                title: 'Retirement & Investing Guidance',
-                desc: 'Help employees understand their 401k, IRA, and investment options. Verdant AI explains complex concepts in plain language and helps employees make confident decisions.',
+                title: 'Benefits & Retirement Readiness',
+                desc: 'Help employees understand their 401(k) match, HSA/FSA and other benefits they already have, with plain-language explanations that support confident decisions.',
                 icon: (
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                     <path d="M12 2L2 7l10 5 10-5-10-5z" />
@@ -117,7 +117,7 @@ export default function ProductPage() {
               <div key={i} className="card-feature p-8">
                 <div
                   className="w-11 h-11 rounded-2xl flex items-center justify-center mb-5"
-                  style={{ background: 'rgba(24,37,27,0.08)', color: 'var(--forest)' }}
+                  style={{ background: 'rgba(61,26,71,0.08)', color: 'var(--forest)' }}
                 >
                   {feature.icon}
                 </div>
@@ -127,7 +127,7 @@ export default function ProductPage() {
                 >
                   {feature.title}
                 </h3>
-                <p style={{ color: 'rgba(24,37,27,0.6)', fontSize: '0.9rem', lineHeight: 1.75 }}>
+                <p style={{ color: 'rgba(61,26,71,0.6)', fontSize: '0.9rem', lineHeight: 1.75 }}>
                   {feature.desc}
                 </p>
               </div>
@@ -149,8 +149,8 @@ export default function ProductPage() {
                 <br />
                 <em className="italic-accent">deeply personal.</em>
               </h2>
-              <p style={{ color: 'rgba(24,37,27,0.6)', fontSize: '1rem', lineHeight: 1.8, marginBottom: '2rem' }}>
-                Verdant Finance is built with privacy at its core. Employees control exactly what they connect and share. Their individual financial data is never visible to their employer.
+              <p style={{ color: 'rgba(61,26,71,0.6)', fontSize: '1rem', lineHeight: 1.8, marginBottom: '2rem' }}>
+                FutureReady is built with privacy at its core. Employees control exactly what they connect and share. Their individual financial data is never visible to their employer.
               </p>
               <div className="space-y-5">
                 {[
@@ -162,7 +162,7 @@ export default function ProductPage() {
                   <div key={item.title} className="flex items-start gap-4">
                     <div
                       className="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
-                      style={{ background: 'rgba(24,37,27,0.1)' }}
+                      style={{ background: 'rgba(61,26,71,0.1)' }}
                     >
                       <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="var(--forest)" strokeWidth="3">
                         <path d="M5 13l4 4L19 7" />
@@ -170,7 +170,7 @@ export default function ProductPage() {
                     </div>
                     <div>
                       <p style={{ fontWeight: 600, color: 'var(--forest)', fontSize: '0.9rem', marginBottom: '0.2rem' }}>{item.title}</p>
-                      <p style={{ color: 'rgba(24,37,27,0.55)', fontSize: '0.85rem' }}>{item.desc}</p>
+                      <p style={{ color: 'rgba(61,26,71,0.55)', fontSize: '0.85rem' }}>{item.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -180,7 +180,7 @@ export default function ProductPage() {
             {/* Privacy visual */}
             <div
               className="rounded-2xl p-8"
-              style={{ background: 'var(--ivory)', border: '1px solid rgba(24,37,27,0.1)' }}
+              style={{ background: 'var(--ivory)', border: '1px solid rgba(61,26,71,0.1)' }}
             >
               <div className="flex items-center gap-3 mb-6">
                 <div
@@ -199,21 +199,21 @@ export default function ProductPage() {
 
               <div className="space-y-3">
                 {[
-                  { label: 'Bank accounts', connected: true },
-                  { label: 'Spending categories', connected: true },
-                  { label: 'Savings goals', connected: true },
-                  { label: 'Investment accounts', connected: false },
+                  { label: 'Milestone selections', connected: true },
+                  { label: 'Benefit elections', connected: true },
+                  { label: 'Plan checklists', connected: true },
+                  { label: 'Retirement accounts', connected: false },
                   { label: 'Credit score', connected: false },
                 ].map(item => (
                   <div
                     key={item.label}
                     className="flex items-center justify-between p-3 rounded-xl"
-                    style={{ background: 'rgba(24,37,27,0.04)', border: '1px solid rgba(24,37,27,0.08)' }}
+                    style={{ background: 'rgba(61,26,71,0.04)', border: '1px solid rgba(61,26,71,0.08)' }}
                   >
                     <span style={{ fontSize: '0.85rem', color: 'var(--charcoal)', fontWeight: 500 }}>{item.label}</span>
                     <div
                       className="w-9 h-5 rounded-full flex items-center px-0.5 transition-all"
-                      style={{ background: item.connected ? 'var(--olive)' : 'rgba(24,37,27,0.15)' }}
+                      style={{ background: item.connected ? 'var(--olive)' : 'rgba(61,26,71,0.15)' }}
                     >
                       <div
                         className="w-4 h-4 bg-white rounded-full shadow-sm transition-all"
@@ -223,7 +223,7 @@ export default function ProductPage() {
                   </div>
                 ))}
               </div>
-              <p style={{ fontSize: '0.72rem', color: 'rgba(24,37,27,0.4)', marginTop: '1rem', textAlign: 'center' }}>
+              <p style={{ fontSize: '0.72rem', color: 'rgba(61,26,71,0.4)', marginTop: '1rem', textAlign: 'center' }}>
                 Conceptual — employees control their own permissions
               </p>
             </div>
@@ -235,9 +235,9 @@ export default function ProductPage() {
       <section className="py-28 px-6" style={{ background: 'var(--forest)' }}>
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="headline-lg text-white mb-8">
-            Ready to give your team
+            Ready to help your team
             <br />
-            <em className="italic-accent">financial peace of mind?</em>
+            <em className="italic-accent">get ready for what&apos;s next?</em>
           </h2>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Link href="/talk-to-sales" className="btn-primary">

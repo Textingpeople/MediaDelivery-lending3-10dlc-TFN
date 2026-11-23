@@ -2,15 +2,22 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Verdant Finance — Financial Wellness for Every Employee",
-  description: "Verdant Finance is an AI-powered financial wellness platform that helps companies support their employees' financial security, confidence, and long-term wellbeing.",
-  keywords: "employee financial wellness, financial wellbeing, workplace financial benefits, AI financial advisor, employee benefits, financial security",
+  metadataBase: new URL("https://getfuturereadynow.com"),
+  title: "FutureReady — Get ready for what's next",
+  description: "FutureReady is an employer-offered benefit that helps employees understand the benefits they already have and plan for life milestones: first home, student-loan payoff, growing a family, career changes and retirement readiness.",
+  keywords: "employee benefits, 401(k) match, HSA, FSA, open enrollment, life milestones, first home, student loan payoff, retirement readiness, benefits education",
   openGraph: {
-    title: "Verdant Finance — Financial Wellness for Every Employee",
-    description: "AI-powered financial wellness that meets employees where they are. Budgeting, planning, investing — one platform for every financial journey.",
-    siteName: "Verdant Finance",
+    title: "FutureReady — Get ready for what's next",
+    description: "An employer-offered benefit that helps employees use the benefits they already have and plan for life's big moments.",
+    url: "https://getfuturereadynow.com",
+    siteName: "FutureReady",
     locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "FutureReady — Get ready for what's next",
+    description: "An employer-offered benefit for life milestones and long-term readiness.",
   },
   robots: {
     index: true,

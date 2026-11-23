@@ -8,7 +8,7 @@ import Footer from '../components/Footer';
 // Generate a random Employer ID for demo/validation purposes
 function generateEmployerId() {
   const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
-  let id = 'VF-';
+  let id = 'FR-';
   for (let i = 0; i < 4; i++) id += chars[Math.floor(Math.random() * chars.length)];
   id += '-';
   for (let i = 0; i < 4; i++) id += chars[Math.floor(Math.random() * chars.length)];
@@ -24,8 +24,8 @@ function StepIndicator({ current, total }: { current: number; total: number }) {
           <div
             className="w-6 h-6 rounded-full flex items-center justify-center font-mono-label transition-all"
             style={{
-              background: i < current ? 'var(--olive)' : i === current ? 'var(--forest)' : 'rgba(24,37,27,0.1)',
-              color: i <= current ? 'white' : 'rgba(24,37,27,0.35)',
+              background: i < current ? 'var(--olive)' : i === current ? 'var(--forest)' : 'rgba(61,26,71,0.1)',
+              color: i <= current ? 'white' : 'rgba(61,26,71,0.35)',
               fontSize: '0.55rem',
             }}
           >
@@ -40,7 +40,7 @@ function StepIndicator({ current, total }: { current: number; total: number }) {
           {i < total - 1 && (
             <div
               className="w-8 h-px"
-              style={{ background: i < current ? 'var(--olive)' : 'rgba(24,37,27,0.12)' }}
+              style={{ background: i < current ? 'var(--olive)' : 'rgba(61,26,71,0.12)' }}
             />
           )}
         </div>
@@ -66,8 +66,11 @@ export default function SignupPage() {
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success'>('idle');
 
   // Generate a valid employer ID on mount (simulating what HR would provide)
+  // Generated after mount (random value would cause a hydration mismatch if rendered on the server).
   useEffect(() => {
-    setValidEmployerId(generateEmployerId());
+    const id = generateEmployerId();
+    const timer = setTimeout(() => setValidEmployerId(id), 0);
+    return () => clearTimeout(timer);
   }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -106,7 +109,7 @@ export default function SignupPage() {
   const steps = [
     { label: 'Your Info', desc: 'Tell us who you are' },
     { label: 'Employer', desc: 'Connect your employer' },
-    { label: 'AI Alerts', desc: 'Set up notifications' },
+    { label: 'Reminders', desc: 'Set up notifications' },
   ];
 
   return (
@@ -118,7 +121,7 @@ export default function SignupPage() {
         {/* ── LEFT: Forest panel ── */}
         <div
           className="relative hidden md:flex flex-col justify-between p-12 pt-32"
-          style={{ background: 'linear-gradient(135deg, #0D1526 0%, #1A2340 50%, #1E2D52 100%)' }}
+          style={{ background: 'linear-gradient(135deg, #2A0F33 0%, #3D1A47 50%, #4A2158 100%)' }}
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
@@ -127,19 +130,19 @@ export default function SignupPage() {
             className="absolute inset-0 w-full h-full object-cover"
             
           />
-          <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(61,90,138,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(61,90,138,0.15) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
+          <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(142,69,133,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(142,69,133,0.15) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
 
           <div className="relative z-10">
             <p className="font-mono-label mb-8" style={{ color: 'rgba(245,243,235,0.45)', fontSize: '0.65rem' }}>
               Employee Onboarding
             </p>
             <h2 className="headline-lg text-white mb-6" style={{ maxWidth: '380px' }}>
-              Your financial
+              Get ready for
               <br />
-              <em className="italic-accent">wellness starts here.</em>
+              <em className="italic-accent">what&apos;s next.</em>
             </h2>
             <p style={{ color: 'rgba(245,243,235,0.6)', fontSize: '0.95rem', lineHeight: 1.8, maxWidth: '320px' }}>
-              Set up your Verdant Finance account and connect to your employer&apos;s financial wellness program in minutes.
+              Set up your FutureReady account and connect to your employer&apos;s FutureReady benefit in minutes.
             </p>
           </div>
 
@@ -183,7 +186,7 @@ export default function SignupPage() {
               <div className="text-center py-12">
                 <div
                   className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"
-                  style={{ background: 'rgba(72,82,56,0.12)' }}
+                  style={{ background: 'rgba(142,69,133,0.12)' }}
                 >
                   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--olive)" strokeWidth="2">
                     <path d="M5 13l4 4L19 7" />
@@ -192,8 +195,8 @@ export default function SignupPage() {
                 <h2 className="headline-md mb-4" style={{ color: 'var(--forest)' }}>
                   You&apos;re all set.
                 </h2>
-                <p style={{ color: 'rgba(24,37,27,0.55)', fontSize: '0.95rem', lineHeight: 1.7, marginBottom: '2rem' }}>
-                  Your account has been created. Check your email for next steps to access your financial wellness dashboard.
+                <p style={{ color: 'rgba(61,26,71,0.55)', fontSize: '0.95rem', lineHeight: 1.7, marginBottom: '2rem' }}>
+                  Your account has been created. Check your email for next steps to access your milestone dashboard.
                 </p>
                 <Link href="/" className="btn-forest">
                   Back to Home
@@ -214,7 +217,7 @@ export default function SignupPage() {
                       <br />
                       <em className="italic-accent">the basics.</em>
                     </h1>
-                    <p style={{ color: 'rgba(24,37,27,0.5)', fontSize: '0.85rem', lineHeight: 1.7, marginBottom: '2rem' }}>
+                    <p style={{ color: 'rgba(61,26,71,0.5)', fontSize: '0.85rem', lineHeight: 1.7, marginBottom: '2rem' }}>
                       Enter your name and work email to create your account.
                     </p>
                     <div className="space-y-4">
@@ -231,8 +234,8 @@ export default function SignupPage() {
                           placeholder="Jane Smith"
                           className="w-full px-4 py-3 rounded-xl text-sm"
                           style={{
-                            background: 'rgba(24,37,27,0.04)',
-                            border: '1px solid rgba(24,37,27,0.12)',
+                            background: 'rgba(61,26,71,0.04)',
+                            border: '1px solid rgba(61,26,71,0.12)',
                             color: 'var(--charcoal)',
                             outline: 'none',
                             fontFamily: 'Inter, sans-serif',
@@ -252,8 +255,8 @@ export default function SignupPage() {
                           placeholder="jane@company.com"
                           className="w-full px-4 py-3 rounded-xl text-sm"
                           style={{
-                            background: 'rgba(24,37,27,0.04)',
-                            border: `1px solid ${emailError ? '#dc2626' : 'rgba(24,37,27,0.12)'}`,
+                            background: 'rgba(61,26,71,0.04)',
+                            border: `1px solid ${emailError ? '#dc2626' : 'rgba(61,26,71,0.12)'}`,
                             color: 'var(--charcoal)',
                             outline: 'none',
                             fontFamily: 'Inter, sans-serif',
@@ -289,7 +292,7 @@ export default function SignupPage() {
                       <br />
                       <em className="italic-accent">employer.</em>
                     </h1>
-                    <p style={{ color: 'rgba(24,37,27,0.5)', fontSize: '0.85rem', lineHeight: 1.7, marginBottom: '2rem' }}>
+                    <p style={{ color: 'rgba(61,26,71,0.5)', fontSize: '0.85rem', lineHeight: 1.7, marginBottom: '2rem' }}>
                       Enter the Employer ID from your onboarding email to link your account to your company&apos;s wellness program.
                     </p>
 
@@ -307,8 +310,8 @@ export default function SignupPage() {
                           placeholder={validEmployerId}
                           className="w-full px-4 py-3 rounded-xl text-sm"
                           style={{
-                            background: 'rgba(24,37,27,0.04)',
-                            border: `1px solid ${employerIdError ? '#dc2626' : 'rgba(24,37,27,0.12)'}`,
+                            background: 'rgba(61,26,71,0.04)',
+                            border: `1px solid ${employerIdError ? '#dc2626' : 'rgba(61,26,71,0.12)'}`,
                             color: 'var(--charcoal)',
                             outline: 'none',
                             fontFamily: 'JetBrains Mono, monospace',
@@ -318,7 +321,7 @@ export default function SignupPage() {
                         {employerIdError ? (
                           <p style={{ fontSize: '0.72rem', color: '#dc2626', marginTop: '0.4rem' }}>{employerIdError}</p>
                         ) : (
-                          <p style={{ fontSize: '0.7rem', color: 'rgba(24,37,27,0.4)', marginTop: '0.4rem' }}>
+                          <p style={{ fontSize: '0.7rem', color: 'rgba(61,26,71,0.4)', marginTop: '0.4rem' }}>
                             Find your Employer ID in your onboarding email or ask your HR team.
                           </p>
                         )}
@@ -329,7 +332,7 @@ export default function SignupPage() {
                           onClick={() => setStep(0)}
                           className="font-mono-label px-5 py-3 rounded-full transition-all"
                           style={{
-                            border: '1px solid rgba(24,37,27,0.2)',
+                            border: '1px solid rgba(61,26,71,0.2)',
                             color: 'var(--forest)',
                             fontSize: '0.65rem',
                             background: 'transparent',
@@ -354,39 +357,39 @@ export default function SignupPage() {
                   </>
                 )}
 
-                {/* ── STEP 2: AI Alerts ── */}
+                {/* ── STEP 2: Milestone Reminders ── */}
                 {step === 2 && (
                   <form onSubmit={handleSubmit}>
                     <p className="font-mono-label mb-4" style={{ color: 'var(--olive)', fontSize: '0.65rem' }}>
-                      Step 3 of 3 — AI Financial Alerts
+                      Step 3 of 3 — Milestone Reminders
                     </p>
                     <h1 className="headline-md mb-2" style={{ color: 'var(--forest)', fontSize: '1.75rem' }}>
                       Stay informed
                       <br />
-                      <em className="italic-accent">by your AI advisor.</em>
+                      <em className="italic-accent">by the Milestone Planner.</em>
                     </h1>
-                    <p style={{ color: 'rgba(24,37,27,0.5)', fontSize: '0.85rem', lineHeight: 1.7, marginBottom: '1.5rem' }}>
-                      Verdant AI can send you personalized financial insights, goal reminders, and spending alerts directly to your phone — so you never miss an important moment in your financial journey.
+                    <p style={{ color: 'rgba(61,26,71,0.5)', fontSize: '0.85rem', lineHeight: 1.7, marginBottom: '1.5rem' }}>
+                      The Milestone Planner can text you educational tips and reminders about your benefits and milestones — like open enrollment dates — so you never miss an important moment.
                     </p>
 
                     {/* What you'll receive */}
                     <div
                       className="rounded-xl p-4 mb-5"
-                      style={{ background: 'rgba(72,82,56,0.06)', border: '1px solid rgba(72,82,56,0.12)' }}
+                      style={{ background: 'rgba(142,69,133,0.06)', border: '1px solid rgba(142,69,133,0.12)' }}
                     >
                       <p className="font-mono-label mb-3" style={{ color: 'var(--olive)', fontSize: '0.6rem' }}>
-                        What Verdant AI will text you
+                        What the Milestone Planner will text you
                       </p>
                       <div className="space-y-2">
                         {[
-                          { icon: '💡', text: 'Personalized financial insights based on your goals' },
-                          { icon: '🎯', text: 'Goal milestone alerts when you hit savings targets' },
-                          { icon: '📊', text: 'Weekly spending summaries and budget reminders' },
+                          { icon: '💡', text: 'Educational tips for the milestone you are preparing for' },
+                          { icon: '🎯', text: 'Reminders for key benefit and milestone dates' },
+                          { icon: '📊', text: 'Open enrollment and 401(k) match reminders' },
                           { icon: '🔔', text: 'Account notifications and important updates' },
                         ].map((item, i) => (
                           <div key={i} className="flex items-start gap-2">
                             <span style={{ fontSize: '0.85rem' }}>{item.icon}</span>
-                            <p style={{ fontSize: '0.78rem', color: 'rgba(24,37,27,0.65)', lineHeight: 1.5 }}>{item.text}</p>
+                            <p style={{ fontSize: '0.78rem', color: 'rgba(61,26,71,0.65)', lineHeight: 1.5 }}>{item.text}</p>
                           </div>
                         ))}
                       </div>
@@ -406,15 +409,15 @@ export default function SignupPage() {
                         placeholder="(555) 555-5555"
                         className="w-full px-4 py-3 rounded-xl text-sm"
                         style={{
-                          background: 'rgba(24,37,27,0.04)',
-                          border: '1px solid rgba(24,37,27,0.12)',
+                          background: 'rgba(61,26,71,0.04)',
+                          border: '1px solid rgba(61,26,71,0.12)',
                           color: 'var(--charcoal)',
                           outline: 'none',
                           fontFamily: 'Inter, sans-serif',
                         }}
                       />
-                      <p style={{ fontSize: '0.7rem', color: 'rgba(24,37,27,0.4)', marginTop: '0.4rem' }}>
-                        This is the number Verdant AI will use to send you alerts.
+                      <p style={{ fontSize: '0.7rem', color: 'rgba(61,26,71,0.4)', marginTop: '0.4rem' }}>
+                        This is the number the Milestone Planner will use to send you reminders.
                       </p>
                     </div>
 
@@ -428,7 +431,7 @@ export default function SignupPage() {
                           className="mt-1 w-4 h-4 rounded flex-shrink-0"
                           style={{ accentColor: 'var(--olive)' }}
                         />
-                        <label htmlFor="termsAgreement" style={{ fontSize: '0.75rem', color: 'rgba(24,37,27,0.5)', lineHeight: 1.6 }}>
+                        <label htmlFor="termsAgreement" style={{ fontSize: '0.75rem', color: 'rgba(61,26,71,0.5)', lineHeight: 1.6 }}>
                           I have read and agree to the{' '}
                           <Link href="/privacy" style={{ color: 'var(--olive)', textDecoration: 'underline' }}>Privacy Policy</Link>
                           {' '}and{' '}
@@ -444,8 +447,11 @@ export default function SignupPage() {
                           className="mt-1 w-4 h-4 rounded flex-shrink-0"
                           style={{ accentColor: 'var(--olive)' }}
                         />
-                        <label htmlFor="accountNotifications" style={{ fontSize: '0.72rem', color: 'rgba(24,37,27,0.45)', lineHeight: 1.6 }}>
-                          By checking this box, I agree to receive Transactional Account Notification SMS messages from Verdant Finance at the phone number provided. I understand I may opt out at any time by replying STOP. Reply HELP for help. Message and data rates may apply. Message frequency varies. Opting in is optional and not required to submit this form. Consent is not required as a condition of purchasing any products or services.
+                        <label htmlFor="accountNotifications" style={{ fontSize: '0.72rem', color: 'rgba(61,26,71,0.45)', lineHeight: 1.6 }}>
+                          By checking this box, I agree to receive Transactional Account Notification SMS messages from FutureReady at the phone number provided. I understand I may opt out at any time by replying STOP. Reply HELP for help. Message and data rates may apply. Message frequency varies. Opting in is optional and not required to submit this form. Consent is not required as a condition of purchasing any products or services.{' '}
+                          <Link href="/terms" style={{ color: 'var(--olive)', textDecoration: 'underline' }}>Terms</Link>
+                          {' · '}
+                          <Link href="/privacy" style={{ color: 'var(--olive)', textDecoration: 'underline' }}>Privacy</Link>
                         </label>
                       </div>
                       <div className="flex items-start gap-3">
@@ -457,8 +463,11 @@ export default function SignupPage() {
                           className="mt-1 w-4 h-4 rounded flex-shrink-0"
                           style={{ accentColor: 'var(--olive)' }}
                         />
-                        <label htmlFor="customerCare" style={{ fontSize: '0.72rem', color: 'rgba(24,37,27,0.45)', lineHeight: 1.6 }}>
-                          By checking this box, I agree to receive Promotional Marketing SMS messages from Verdant Finance at the phone number provided, including special offers and exclusive updates. I understand I may opt out at any time by replying STOP. Reply HELP for help. Message and data rates may apply. Message frequency varies. Opting in is optional and not required to submit this form. Consent is not required as a condition of purchasing any products or services.
+                        <label htmlFor="customerCare" style={{ fontSize: '0.72rem', color: 'rgba(61,26,71,0.45)', lineHeight: 1.6 }}>
+                          By checking this box, I agree to receive Promotional Marketing SMS messages from FutureReady at the phone number provided, including special offers and exclusive updates. I understand I may opt out at any time by replying STOP. Reply HELP for help. Message and data rates may apply. Message frequency varies. Opting in is optional and not required to submit this form. Consent is not required as a condition of purchasing any products or services.{' '}
+                          <Link href="/terms" style={{ color: 'var(--olive)', textDecoration: 'underline' }}>Terms</Link>
+                          {' · '}
+                          <Link href="/privacy" style={{ color: 'var(--olive)', textDecoration: 'underline' }}>Privacy</Link>
                         </label>
                       </div>
                     </div>
@@ -469,7 +478,7 @@ export default function SignupPage() {
                         onClick={() => setStep(1)}
                         className="font-mono-label px-5 py-3 rounded-full transition-all"
                         style={{
-                          border: '1px solid rgba(24,37,27,0.2)',
+                          border: '1px solid rgba(61,26,71,0.2)',
                           color: 'var(--forest)',
                           fontSize: '0.65rem',
                           background: 'transparent',

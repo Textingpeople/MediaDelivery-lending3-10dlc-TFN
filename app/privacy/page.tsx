@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
+import SmsSampleMessages from '../components/SmsSampleMessages';
 
 const today = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 
@@ -29,12 +30,12 @@ export default function PrivacyPage() {
       {/* ── CONTENT ── */}
       <section className="py-20 px-6" style={{ background: 'var(--ivory)' }}>
         <div className="max-w-3xl mx-auto">
-          <div className="space-y-10" style={{ fontSize: '0.92rem', lineHeight: 1.8, color: 'rgba(24,37,27,0.75)' }}>
+          <div className="space-y-10" style={{ fontSize: '0.92rem', lineHeight: 1.8, color: 'rgba(61,26,71,0.75)' }}>
 
             {/* Intro */}
             <div>
               <p>
-                Verdant Finance ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our AI-powered financial wellness platform and website at <strong>verdantfinance.com</strong>. By using our service, you agree to the collection and use of information in accordance with this policy.
+                FutureReady (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our benefits and milestone-planning platform and website at <strong>getfuturereadynow.com</strong>. By using our service, you agree to the collection and use of information in accordance with this policy.
               </p>
             </div>
 
@@ -49,8 +50,8 @@ export default function PrivacyPage() {
                 <li>Employer ID (provided by your employer or HR team)</li>
                 <li>Mobile phone number (if you opt in to SMS notifications)</li>
                 <li>Financial account information you choose to connect (e.g., bank accounts, investment accounts)</li>
-                <li>Financial goals, spending categories, and preferences you set within the platform</li>
-                <li>Questions and conversations you have with Verdant AI</li>
+                <li>Milestones, benefit selections, and preferences you set within the platform</li>
+                <li>Questions and conversations you have with Milestone Planner</li>
                 <li>SMS opt-in consent preferences</li>
                 <li>Usage data and device information (browser type, IP address, pages visited)</li>
               </ul>
@@ -62,32 +63,32 @@ export default function PrivacyPage() {
                 2. SMS Messaging
               </h2>
               <p className="mb-3">
-                Verdant Finance uses SMS messaging to deliver AI-powered financial alerts and account notifications to employees who opt in. The following terms apply to our SMS program:
+                FutureReady uses SMS messaging to deliver milestone reminders and account notifications to employees who opt in. The following terms apply to our SMS program:
               </p>
 
               <div className="space-y-4">
                 <div>
                   <p className="font-mono-label mb-2" style={{ color: 'var(--olive)', fontSize: '0.6rem' }}>Program Description</p>
                   <p>
-                    Verdant Finance sends two types of SMS messages:
+                    FutureReady sends two types of SMS messages:
                   </p>
                   <ul className="list-disc pl-6 mt-2 space-y-1">
-                    <li><strong>Transactional Account Notifications:</strong> Personalized financial insights from Verdant AI, goal milestone alerts, spending summaries, budget reminders, and account updates related to your financial wellness program.</li>
-                    <li><strong>Promotional Marketing Messages:</strong> Special offers, product updates, and exclusive content related to Verdant Finance's financial wellness services.</li>
+                    <li><strong>Transactional Account Notifications:</strong> Educational tips from the Milestone Planner, milestone and open-enrollment reminders, and account updates related to your FutureReady benefit program.</li>
+                    <li><strong>Promotional Marketing Messages:</strong> Special offers, product updates, and exclusive content related to FutureReady&apos;s benefits and milestone-planning services.</li>
                   </ul>
                 </div>
 
                 <div>
                   <p className="font-mono-label mb-2" style={{ color: 'var(--olive)', fontSize: '0.6rem' }}>Opt-In</p>
                   <p>
-                    You may opt in to receive SMS messages during the employee onboarding process by checking the applicable consent boxes. Opting in is entirely optional and is not required to use Verdant Finance's financial wellness platform. Consent is not a condition of purchasing any products or services.
+                    You may opt in to receive SMS messages during the employee onboarding process by checking the applicable consent boxes. Opting in is entirely voluntary and is not required to use the FutureReady platform. Consent is not a condition of purchasing any products or services. You may choose Transactional Account Notification messages, Promotional Marketing messages, or both, and each has its own separate, optional checkbox.
                   </p>
                 </div>
 
                 <div>
                   <p className="font-mono-label mb-2" style={{ color: 'var(--olive)', fontSize: '0.6rem' }}>Message Frequency</p>
                   <p>
-                    Message frequency varies based on your financial activity, goals, and account settings. You may receive up to several messages per week depending on your preferences and financial events.
+                    Message frequency varies based on your benefit activity, milestones, and account settings. You may receive up to several messages per week depending on your preferences and upcoming events such as open enrollment.
                   </p>
                 </div>
 
@@ -101,7 +102,7 @@ export default function PrivacyPage() {
                 <div>
                   <p className="font-mono-label mb-2" style={{ color: 'var(--olive)', fontSize: '0.6rem' }}>Help</p>
                   <p>
-                    Reply <strong>HELP</strong> to any message for assistance, or contact us at <a href="mailto:support@verdantfinance.com" style={{ color: 'var(--olive)', textDecoration: 'underline' }}>support@verdantfinance.com</a>.
+                    Reply <strong>HELP</strong> to any message for assistance, or contact us at <a href="mailto:support@getfuturereadynow.com" style={{ color: 'var(--olive)', textDecoration: 'underline' }}>support@getfuturereadynow.com</a>.
                   </p>
                 </div>
 
@@ -114,15 +115,17 @@ export default function PrivacyPage() {
 
                 <div
                   className="rounded-xl p-4"
-                  style={{ background: 'rgba(72,82,56,0.06)', border: '1px solid rgba(72,82,56,0.15)' }}
+                  style={{ background: 'rgba(142,69,133,0.06)', border: '1px solid rgba(142,69,133,0.15)' }}
                 >
                   <p style={{ fontWeight: 600, color: 'var(--forest)', marginBottom: '0.5rem' }}>
                     No Mobile Data Sharing
                   </p>
                   <p>
-                    <strong>No mobile information will be shared with or sold to third parties for marketing or promotional purposes.</strong> Your mobile number is used solely to deliver the SMS messages you have opted into through Verdant Finance.
+                    <strong>No mobile information will be shared with third parties or affiliates for marketing or promotional purposes. Text messaging originator opt-in data and consent will not be shared with any third parties.</strong>
                   </p>
                 </div>
+
+                <SmsSampleMessages />
               </div>
             </div>
 
@@ -132,13 +135,13 @@ export default function PrivacyPage() {
                 3. How We Use Your Information
               </h2>
               <ul className="list-disc pl-6 space-y-2">
-                <li>To create and manage your Verdant Finance account</li>
-                <li>To connect your account to your employer's financial wellness program</li>
-                <li>To provide personalized AI-powered financial guidance and insights</li>
+                <li>To create and manage your FutureReady account</li>
+                <li>To connect your account to your employer-offered FutureReady benefit program</li>
+                <li>To provide educational guidance through the Milestone Planner</li>
                 <li>To send SMS messages you have opted into (financial alerts, account notifications, or promotional messages)</li>
                 <li>To track your financial goals and progress</li>
-                <li>To provide aggregate, anonymized wellness metrics to your employer (never individual financial data)</li>
-                <li>To improve our platform and AI capabilities</li>
+                <li>To provide aggregate, anonymized engagement metrics to your employer (never individual financial data)</li>
+                <li>To improve our platform and the Milestone Planner</li>
                 <li>To comply with legal obligations</li>
               </ul>
             </div>
@@ -149,10 +152,10 @@ export default function PrivacyPage() {
                 4. Employer Data Sharing
               </h2>
               <p className="mb-3">
-                Verdant Finance is designed with employee privacy at its core. Your employer will never see your individual financial data, account balances, spending details, or conversations with Verdant AI.
+                FutureReady is designed with employee privacy at its core. Your employer will never see your individual financial data, account details, or conversations with Milestone Planner.
               </p>
               <p>
-                Employers receive only <strong>aggregate, anonymized wellness metrics</strong> — such as overall program engagement rates, average financial wellness scores across the workforce, and goal completion trends. These metrics cannot be traced back to any individual employee.
+                Employers receive only <strong>aggregate, anonymized engagement metrics</strong> — such as overall program engagement rates, milestone plan activity, and which benefit topics are most explored. These metrics cannot be traced back to any individual employee.
               </p>
             </div>
 
@@ -180,7 +183,7 @@ export default function PrivacyPage() {
                 <li>Disconnect financial accounts you have connected to the platform</li>
               </ul>
               <p className="mt-3">
-                To exercise any of these rights, contact us at <a href="mailto:support@verdantfinance.com" style={{ color: 'var(--olive)', textDecoration: 'underline' }}>support@verdantfinance.com</a>.
+                To exercise any of these rights, contact us at <a href="mailto:support@getfuturereadynow.com" style={{ color: 'var(--olive)', textDecoration: 'underline' }}>support@getfuturereadynow.com</a>.
               </p>
             </div>
 
@@ -193,9 +196,11 @@ export default function PrivacyPage() {
                 If you have questions about this Privacy Policy or our data practices, please contact us:
               </p>
               <div className="mt-3 space-y-1">
-                <p><strong>Verdant Finance</strong></p>
-                <p>Email: <a href="mailto:support@verdantfinance.com" style={{ color: 'var(--olive)', textDecoration: 'underline' }}>support@verdantfinance.com</a></p>
-                <p>Website: <a href="https://verdantfinance.com" style={{ color: 'var(--olive)', textDecoration: 'underline' }}>verdantfinance.com</a></p>
+                <p><strong>Media Delivery Solutions LLC, a Wyoming limited liability company, d/b/a FutureReady</strong></p>
+                <p>Address: 9 Johnston Dr, Bloomsbury, NJ 08804, United States</p>
+                <p>Phone: <a href="tel:+19083998307" style={{ color: 'var(--olive)', textDecoration: 'underline' }}>(908) 399-8307</a></p>
+                <p>Email: <a href="mailto:support@getfuturereadynow.com" style={{ color: 'var(--olive)', textDecoration: 'underline' }}>support@getfuturereadynow.com</a></p>
+                <p>Website: <a href="https://getfuturereadynow.com" style={{ color: 'var(--olive)', textDecoration: 'underline' }}>getfuturereadynow.com</a></p>
               </div>
             </div>
 

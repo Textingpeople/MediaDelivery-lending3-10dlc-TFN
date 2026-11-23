@@ -32,7 +32,7 @@ export default function TalkToSalesPage() {
         {/* ── LEFT: Forest panel ── */}
         <div
           className="relative hidden md:flex flex-col justify-between p-12 pt-32"
-          style={{ background: 'linear-gradient(135deg, #0D1526 0%, #1A2340 50%, #1E2D52 100%)' }}
+          style={{ background: 'linear-gradient(135deg, #2A0F33 0%, #3D1A47 50%, #4A2158 100%)' }}
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
@@ -41,7 +41,7 @@ export default function TalkToSalesPage() {
             className="absolute inset-0 w-full h-full object-cover"
             
           />
-          <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(61,90,138,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(61,90,138,0.15) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
+          <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(142,69,133,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(142,69,133,0.15) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
 
           <div className="relative z-10">
             <p className="font-mono-label mb-8" style={{ color: 'rgba(245,243,235,0.45)', fontSize: '0.65rem' }}>
@@ -53,14 +53,14 @@ export default function TalkToSalesPage() {
               <em className="italic-accent">for your team.</em>
             </h2>
             <p style={{ color: 'rgba(245,243,235,0.6)', fontSize: '0.95rem', lineHeight: 1.8, maxWidth: '320px' }}>
-              Our team will walk you through how Verdant Finance works, answer your questions, and help you find the right plan for your organization.
+              Our team will walk you through how FutureReady works, answer your questions, and help you find the right plan for your organization.
             </p>
           </div>
 
           <div className="relative z-10 space-y-6">
             {[
-              { title: 'Personalized demo', desc: 'See Verdant Finance in action with a walkthrough tailored to your team.' },
-              { title: 'Flexible pricing', desc: 'Plans that scale with your organization — from 10 to 10,000 employees.' },
+              { title: 'Personalized demo', desc: 'See FutureReady in action with a walkthrough tailored to your team.' },
+              { title: 'Flexible pricing', desc: 'Plans that scale with the size of your organization.' },
               { title: 'Dedicated onboarding', desc: 'Our success team handles setup, rollout, and ongoing engagement.' },
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-3">
@@ -82,7 +82,7 @@ export default function TalkToSalesPage() {
               <div className="text-center py-12">
                 <div
                   className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"
-                  style={{ background: 'rgba(72,82,56,0.12)' }}
+                  style={{ background: 'rgba(142,69,133,0.12)' }}
                 >
                   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--olive)" strokeWidth="2">
                     <path d="M5 13l4 4L19 7" />
@@ -91,7 +91,7 @@ export default function TalkToSalesPage() {
                 <h2 className="headline-md mb-4" style={{ color: 'var(--forest)' }}>
                   We&apos;ll be in touch.
                 </h2>
-                <p style={{ color: 'rgba(24,37,27,0.55)', fontSize: '0.95rem', lineHeight: 1.7, marginBottom: '2rem' }}>
+                <p style={{ color: 'rgba(61,26,71,0.55)', fontSize: '0.95rem', lineHeight: 1.7, marginBottom: '2rem' }}>
                   Thank you for reaching out. A member of our sales team will contact you within one business day.
                 </p>
                 <Link href="/" className="btn-forest">
@@ -104,11 +104,11 @@ export default function TalkToSalesPage() {
                   Talk to Sales
                 </p>
                 <h1 className="headline-md mb-3" style={{ color: 'var(--forest)', fontSize: '2rem' }}>
-                  Ready to bring financial
+                  Ready to bring FutureReady
                   <br />
-                  <em className="italic-accent">wellness to your team?</em>
+                  <em className="italic-accent">to your team?</em>
                 </h1>
-                <p style={{ color: 'rgba(24,37,27,0.55)', fontSize: '0.9rem', lineHeight: 1.7, marginBottom: '2.5rem' }}>
+                <p style={{ color: 'rgba(61,26,71,0.55)', fontSize: '0.9rem', lineHeight: 1.7, marginBottom: '2.5rem' }}>
                   Tell us about your organization and we&apos;ll reach out to schedule a personalized demo.
                 </p>
 
@@ -127,8 +127,8 @@ export default function TalkToSalesPage() {
                       placeholder="Jane Smith"
                       className="w-full px-4 py-3 rounded-xl text-sm"
                       style={{
-                        background: 'rgba(24,37,27,0.04)',
-                        border: '1px solid rgba(24,37,27,0.12)',
+                        background: 'rgba(61,26,71,0.04)',
+                        border: '1px solid rgba(61,26,71,0.12)',
                         color: 'var(--charcoal)',
                         outline: 'none',
                         fontFamily: 'Inter, sans-serif',
@@ -150,8 +150,8 @@ export default function TalkToSalesPage() {
                       placeholder="jane@company.com"
                       className="w-full px-4 py-3 rounded-xl text-sm"
                       style={{
-                        background: 'rgba(24,37,27,0.04)',
-                        border: '1px solid rgba(24,37,27,0.12)',
+                        background: 'rgba(61,26,71,0.04)',
+                        border: '1px solid rgba(61,26,71,0.12)',
                         color: 'var(--charcoal)',
                         outline: 'none',
                         fontFamily: 'Inter, sans-serif',
@@ -173,8 +173,8 @@ export default function TalkToSalesPage() {
                       placeholder="Acme Corp"
                       className="w-full px-4 py-3 rounded-xl text-sm"
                       style={{
-                        background: 'rgba(24,37,27,0.04)',
-                        border: '1px solid rgba(24,37,27,0.12)',
+                        background: 'rgba(61,26,71,0.04)',
+                        border: '1px solid rgba(61,26,71,0.12)',
                         color: 'var(--charcoal)',
                         outline: 'none',
                         fontFamily: 'Inter, sans-serif',
@@ -194,9 +194,9 @@ export default function TalkToSalesPage() {
                       onChange={handleChange}
                       className="w-full px-4 py-3 rounded-xl text-sm"
                       style={{
-                        background: 'rgba(24,37,27,0.04)',
-                        border: '1px solid rgba(24,37,27,0.12)',
-                        color: formData.teamSize ? 'var(--charcoal)' : 'rgba(24,37,27,0.35)',
+                        background: 'rgba(61,26,71,0.04)',
+                        border: '1px solid rgba(61,26,71,0.12)',
+                        color: formData.teamSize ? 'var(--charcoal)' : 'rgba(61,26,71,0.35)',
                         outline: 'none',
                         fontFamily: 'Inter, sans-serif',
                       }}
@@ -224,8 +224,8 @@ export default function TalkToSalesPage() {
                       placeholder="(555) 555-5555"
                       className="w-full px-4 py-3 rounded-xl text-sm"
                       style={{
-                        background: 'rgba(24,37,27,0.04)',
-                        border: '1px solid rgba(24,37,27,0.12)',
+                        background: 'rgba(61,26,71,0.04)',
+                        border: '1px solid rgba(61,26,71,0.12)',
                         color: 'var(--charcoal)',
                         outline: 'none',
                         fontFamily: 'Inter, sans-serif',
@@ -246,8 +246,8 @@ export default function TalkToSalesPage() {
                       placeholder="Tell us about your goals or any specific questions..."
                       className="w-full px-4 py-3 rounded-xl text-sm resize-none"
                       style={{
-                        background: 'rgba(24,37,27,0.04)',
-                        border: '1px solid rgba(24,37,27,0.12)',
+                        background: 'rgba(61,26,71,0.04)',
+                        border: '1px solid rgba(61,26,71,0.12)',
                         color: 'var(--charcoal)',
                         outline: 'none',
                         fontFamily: 'Inter, sans-serif',
@@ -264,7 +264,7 @@ export default function TalkToSalesPage() {
                       className="mt-1 w-4 h-4 rounded flex-shrink-0"
                       style={{ accentColor: 'var(--olive)' }}
                     />
-                    <label htmlFor="termsAgreement" style={{ fontSize: '0.75rem', color: 'rgba(24,37,27,0.5)', lineHeight: 1.6 }}>
+                    <label htmlFor="termsAgreement" style={{ fontSize: '0.75rem', color: 'rgba(61,26,71,0.5)', lineHeight: 1.6 }}>
                       I have read and agree to the{' '}
                       <Link href="/privacy" style={{ color: 'var(--olive)', textDecoration: 'underline' }}>Privacy Policy</Link>
                       {' '}and{' '}

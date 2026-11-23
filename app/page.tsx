@@ -35,8 +35,8 @@ function DashboardMockup() {
       {/* Header */}
       <div className="flex items-center justify-between mb-5">
         <div>
-          <p className="font-mono-label" style={{ color: 'var(--olive)', fontSize: '0.6rem' }}>Good morning</p>
-          <p style={{ fontWeight: 600, color: 'var(--forest)', fontSize: '1rem' }}>Jordan, here&apos;s your overview</p>
+          <p className="font-mono-label" style={{ color: 'var(--olive)', fontSize: '0.6rem' }}>Sample dashboard</p>
+          <p style={{ fontWeight: 600, color: 'var(--forest)', fontSize: '1rem' }}>Jordan&apos;s milestone view</p>
         </div>
         <div
           className="w-9 h-9 rounded-full flex items-center justify-center text-sm font-semibold"
@@ -51,26 +51,26 @@ function DashboardMockup() {
         className="rounded-2xl p-4 mb-4"
         style={{ background: 'var(--forest)', color: 'var(--ivory)' }}
       >
-        <p className="font-mono-label mb-1" style={{ color: 'rgba(245,243,235,0.5)', fontSize: '0.6rem' }}>Net Worth</p>
-        <p style={{ fontSize: '1.75rem', fontWeight: 700, letterSpacing: '-0.02em' }}>$48,240</p>
+        <p className="font-mono-label mb-1" style={{ color: 'rgba(245,243,235,0.5)', fontSize: '0.6rem' }}>Next Milestone</p>
+        <p style={{ fontSize: '1.4rem', fontWeight: 700, letterSpacing: '-0.02em' }}>Buying a first home</p>
         <p style={{ color: 'rgba(245,243,235,0.6)', fontSize: '0.75rem', marginTop: '0.25rem' }}>
-          <span style={{ color: '#7EC8A0' }}>↑ $1,240</span> this month
+          <span style={{ color: 'var(--ivory)', fontWeight: 600 }}>3 of 5</span> readiness steps done (example)
         </p>
       </div>
 
-      {/* Goals */}
+      {/* Milestone steps */}
       <div className="space-y-3 mb-4">
         {[
-          { label: 'Emergency Fund', current: 4200, goal: 6000, pct: 70, color: '#485238' },
-          { label: 'Student Loan Payoff', current: 8400, goal: 12000, pct: 70, color: '#18251B' },
-          { label: 'Retirement (401k)', current: 18600, goal: 25000, pct: 74, color: '#485238' },
+          { label: 'Claim the full 401(k) match', pct: 80, color: '#8E4585' },
+          { label: 'Student-loan payoff plan', pct: 60, color: '#3D1A47' },
+          { label: 'HSA / FSA elections reviewed', pct: 100, color: '#8E4585' },
         ].map(g => (
           <div key={g.label}>
             <div className="flex justify-between items-center mb-1">
               <span style={{ fontSize: '0.78rem', color: 'var(--charcoal)', fontWeight: 500 }}>{g.label}</span>
               <span className="font-mono-label" style={{ color: 'var(--olive)', fontSize: '0.6rem' }}>{g.pct}%</span>
             </div>
-            <div className="rounded-full h-1.5" style={{ background: 'rgba(24,37,27,0.1)' }}>
+            <div className="rounded-full h-1.5" style={{ background: 'rgba(61,26,71,0.1)' }}>
               <div
                 className="h-1.5 rounded-full"
                 style={{ width: `${g.pct}%`, background: g.color, transition: 'width 1s ease' }}
@@ -83,7 +83,7 @@ function DashboardMockup() {
       {/* AI Insight */}
       <div
         className="rounded-xl p-3 flex items-start gap-3"
-        style={{ background: 'rgba(72,82,56,0.1)', border: '1px solid rgba(72,82,56,0.2)' }}
+        style={{ background: 'rgba(142,69,133,0.1)', border: '1px solid rgba(142,69,133,0.2)' }}
       >
         <div
           className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
@@ -94,7 +94,7 @@ function DashboardMockup() {
           </svg>
         </div>
         <p style={{ fontSize: '0.72rem', color: 'var(--forest)', lineHeight: 1.5 }}>
-          <strong>AI Insight:</strong> You&apos;re on track to fully fund your emergency fund by March. Consider increasing your 401k contribution by 2%.
+          <strong>Milestone Planner:</strong> Your employer&apos;s match may go unclaimed at your current contribution rate. Open enrollment is a good time to review it. Educational guidance only.
         </p>
       </div>
     </div>
@@ -104,16 +104,16 @@ function DashboardMockup() {
 // ─── App UI: AI Chat Mockup ────────────────────────────────────────────────────
 function ChatMockup() {
   const messages = [
-    { role: 'user', text: 'How much should I have in my emergency fund?' },
-    { role: 'ai', text: 'Based on your monthly expenses of $3,200, a solid emergency fund is 3–6 months of expenses — so $9,600 to $19,200. You currently have $4,200 saved. You\'re 44% of the way to your minimum goal.' },
-    { role: 'user', text: 'What\'s the fastest way to get there?' },
-    { role: 'ai', text: 'Redirecting your $180/month dining budget by 30% would add $54/month. At that rate, you\'d hit $9,600 in about 10 months. Want me to set up an automatic transfer?' },
+    { role: 'user', text: 'I want to buy a home in a few years. What should I look at in my benefits first?' },
+    { role: 'ai', text: 'A good first step is checking whether you\'re contributing enough to get your employer\'s full 401(k) match, since that\'s part of your compensation. Next, see whether an HSA or FSA fits your expected health costs. Open enrollment is a natural time to review both.' },
+    { role: 'user', text: 'What else should I plan for before buying?' },
+    { role: 'ai', text: 'Many first-time buyers review their student-loan payoff timeline, their credit report and the cost of a down payment. I can walk you through each as a checklist. This is general education, not personalized advice.' },
   ];
 
   return (
     <div className="app-card p-5 w-full max-w-sm mx-auto" style={{ fontFamily: 'Inter, sans-serif' }}>
       {/* Chat header */}
-      <div className="flex items-center gap-3 mb-4 pb-4" style={{ borderBottom: '1px solid rgba(24,37,27,0.08)' }}>
+      <div className="flex items-center gap-3 mb-4 pb-4" style={{ borderBottom: '1px solid rgba(61,26,71,0.08)' }}>
         <div
           className="w-8 h-8 rounded-full flex items-center justify-center"
           style={{ background: 'var(--forest)' }}
@@ -123,10 +123,10 @@ function ChatMockup() {
           </svg>
         </div>
         <div>
-          <p style={{ fontWeight: 600, fontSize: '0.85rem', color: 'var(--forest)' }}>FutureReady AI</p>
+          <p style={{ fontWeight: 600, fontSize: '0.85rem', color: 'var(--forest)' }}>FutureReady Milestone Planner</p>
           <div className="flex items-center gap-1">
             <div className="w-1.5 h-1.5 rounded-full bg-green-500" />
-            <p className="font-mono-label" style={{ color: 'var(--olive)', fontSize: '0.55rem' }}>Online</p>
+            <p className="font-mono-label" style={{ color: 'var(--olive)', fontSize: '0.55rem' }}>Sample conversation</p>
           </div>
         </div>
       </div>
@@ -138,7 +138,7 @@ function ChatMockup() {
             <div
               className="rounded-2xl px-3 py-2 max-w-[85%]"
               style={{
-                background: msg.role === 'user' ? 'var(--forest)' : 'rgba(72,82,56,0.1)',
+                background: msg.role === 'user' ? 'var(--forest)' : 'rgba(142,69,133,0.1)',
                 color: msg.role === 'user' ? 'var(--ivory)' : 'var(--charcoal)',
                 fontSize: '0.72rem',
                 lineHeight: 1.5,
@@ -154,9 +154,9 @@ function ChatMockup() {
       {/* Input */}
       <div
         className="flex items-center gap-2 rounded-full px-4 py-2"
-        style={{ background: 'rgba(24,37,27,0.06)', border: '1px solid rgba(24,37,27,0.1)' }}
+        style={{ background: 'rgba(61,26,71,0.06)', border: '1px solid rgba(61,26,71,0.1)' }}
       >
-        <p style={{ fontSize: '0.72rem', color: 'rgba(24,37,27,0.35)', flex: 1 }}>Ask anything about your finances…</p>
+        <p style={{ fontSize: '0.72rem', color: 'rgba(61,26,71,0.35)', flex: 1 }}>Ask about a milestone or a benefit…</p>
         <div
           className="w-6 h-6 rounded-full flex items-center justify-center"
           style={{ background: 'var(--forest)' }}
@@ -187,7 +187,7 @@ export default function HomePage() {
       <section
         className="relative min-h-screen flex items-center"
         style={{
-          background: 'linear-gradient(135deg, #120D26 0%, #1E1540 40%, #261A52 70%, #120D26 100%)',
+          background: 'linear-gradient(135deg, #2A0F33 0%, #3D1A47 40%, #4A2158 70%, #2A0F33 100%)',
           overflow: 'hidden',
         }}
       >
@@ -196,8 +196,8 @@ export default function HomePage() {
           className="absolute inset-0"
           style={{
             backgroundImage: `
-              linear-gradient(rgba(120,80,200,0.12) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(120,80,200,0.12) 1px, transparent 1px)
+              linear-gradient(rgba(190,110,180,0.12) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(190,110,180,0.12) 1px, transparent 1px)
             `,
             backgroundSize: '60px 60px',
           }}
@@ -210,7 +210,7 @@ export default function HomePage() {
             width: '600px',
             height: '600px',
             borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(120,80,200,0.2) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(190,110,180,0.2) 0%, transparent 70%)',
             top: '-100px',
             right: '-100px',
           }}
@@ -221,7 +221,7 @@ export default function HomePage() {
             width: '400px',
             height: '400px',
             borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(160,120,220,0.12) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(217,166,211,0.12) 0%, transparent 70%)',
             bottom: '100px',
             left: '-50px',
           }}
@@ -241,13 +241,13 @@ export default function HomePage() {
             <div
               className="inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-full"
               style={{
-                background: 'rgba(120,80,200,0.15)',
-                border: '1px solid rgba(120,80,200,0.35)',
+                background: 'rgba(190,110,180,0.15)',
+                border: '1px solid rgba(190,110,180,0.35)',
               }}
             >
-              <div style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#A87EE8' }} />
+              <div style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#D9A6D3' }} />
               <span style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.8rem', fontWeight: 500 }}>
-                Smart Savings for Employees
+                An employer-offered benefit for life&apos;s milestones
               </span>
             </div>
 
@@ -263,11 +263,11 @@ export default function HomePage() {
                 marginBottom: '1.5rem',
               }}
             >
-              Turn your paycheck
+              Get ready
               <br />
-              <span style={{ color: '#A87EE8' }}>into your</span>
+              <span style={{ color: '#D9A6D3' }}>for what&apos;s</span>
               <br />
-              future.
+              next.
             </h1>
 
             {/* Subheading */}
@@ -280,7 +280,7 @@ export default function HomePage() {
                 marginBottom: '2.5rem',
               }}
             >
-              FutureReady is a smart savings platform that helps employees plan for major milestones, automate savings, and build a stronger financial future.
+              FutureReady helps employees understand and use the benefits they already have — 401(k) match, HSA/FSA, open enrollment — and plan for big moments like a first home, student-loan payoff, growing a family, career changes and retirement.
             </p>
 
             {/* CTAs */}
@@ -289,7 +289,7 @@ export default function HomePage() {
                 href="/talk-to-sales"
                 className="inline-flex items-center gap-2"
                 style={{
-                  background: '#6B3DB8',
+                  background: '#8E4585',
                   color: 'white',
                   fontSize: '0.95rem',
                   fontWeight: 600,
@@ -297,8 +297,8 @@ export default function HomePage() {
                   borderRadius: '10px',
                   transition: 'background 0.2s, transform 0.2s',
                 }}
-                onMouseEnter={e => { e.currentTarget.style.background = '#7A4DC8'; e.currentTarget.style.transform = 'translateY(-1px)'; }}
-                onMouseLeave={e => { e.currentTarget.style.background = '#6B3DB8'; e.currentTarget.style.transform = 'translateY(0)'; }}
+                onMouseEnter={e => { e.currentTarget.style.background = '#A0599A'; e.currentTarget.style.transform = 'translateY(-1px)'; }}
+                onMouseLeave={e => { e.currentTarget.style.background = '#8E4585'; e.currentTarget.style.transform = 'translateY(0)'; }}
               >
                 Get Started Free
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -324,17 +324,21 @@ export default function HomePage() {
               </Link>
             </div>
 
-            {/* Social proof */}
-            <div className="flex items-center gap-6 mt-12">
-              {[
-                { value: '10,000+', label: 'Employees served' },
-                { value: '94%', label: 'Satisfaction rate' },
-                { value: '$2.39', label: 'ROI per $1 invested' },
-              ].map(stat => (
-                <div key={stat.label}>
-                  <p style={{ color: 'white', fontWeight: 700, fontSize: '1.25rem', lineHeight: 1 }}>{stat.value}</p>
-                  <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: '0.75rem', marginTop: '0.25rem' }}>{stat.label}</p>
-                </div>
+            {/* Milestones */}
+            <div className="flex flex-wrap items-center gap-2 mt-12">
+              {['First home', 'Student-loan payoff', 'Growing a family', 'Career changes', 'Retirement readiness'].map(m => (
+                <span
+                  key={m}
+                  style={{
+                    color: 'rgba(255,255,255,0.7)',
+                    fontSize: '0.78rem',
+                    padding: '0.35rem 0.85rem',
+                    borderRadius: '999px',
+                    border: '1px solid rgba(255,255,255,0.18)',
+                  }}
+                >
+                  {m}
+                </span>
               ))}
             </div>
           </div>
@@ -342,7 +346,7 @@ export default function HomePage() {
       </section>
 
       {/* ── PILLARS BAR ── */}
-      <section style={{ background: '#1E1540', borderTop: '1px solid rgba(255,255,255,0.08)' }}>
+      <section style={{ background: '#3D1A47', borderTop: '1px solid rgba(255,255,255,0.08)' }}>
         <div className="max-w-5xl mx-auto px-6 py-14">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
@@ -361,8 +365,8 @@ export default function HomePage() {
                     <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 5v6m0 4h.01" />
                   </svg>
                 ),
-                title: 'AI that actually helps',
-                desc: 'Personalized guidance based on each employee\'s real financial situation — not generic advice.',
+                title: 'A Milestone Planner',
+                desc: 'Educational guidance that helps employees understand their benefits and map out the steps to each life milestone.',
               },
               {
                 icon: (
@@ -372,7 +376,7 @@ export default function HomePage() {
                   </svg>
                 ),
                 title: 'Built for every employee',
-                desc: 'From entry-level to executive — FutureReady meets employees where they are, at every income and life stage.',
+                desc: 'From a first job to a final decade before retirement — FutureReady meets employees at every life stage.',
               },
             ].map((pillar, i) => (
               <div key={i} className="flex items-start gap-4">
@@ -407,8 +411,8 @@ export default function HomePage() {
             <br />
             FutureReady
           </h2>
-          <p style={{ color: 'rgba(24,37,27,0.6)', fontSize: '1.05rem', lineHeight: 1.8, maxWidth: '520px', margin: '0 auto' }}>
-            Trusted by forward-thinking companies to help employees turn every paycheck into meaningful progress toward their financial goals.
+          <p style={{ color: 'rgba(61,26,71,0.6)', fontSize: '1.05rem', lineHeight: 1.8, maxWidth: '520px', margin: '0 auto' }}>
+            Most employees already have valuable benefits. FutureReady helps them understand those benefits and use them to prepare for the moments that matter most.
           </p>
         </div>
       </section>
@@ -419,16 +423,16 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               {
-                label: 'One Platform for Every Employee',
-                body: 'Support every financial journey—budgeting, investing, planning, and more—with a single, unified platform. FutureReady meets employees where they are, no matter their income, location, or life stage.',
+                label: 'Make the Most of Your Benefits',
+                body: 'Explain the 401(k) match, HSA/FSA options and open enrollment in plain language, so employees can use the benefits your company already provides.',
               },
               {
-                label: 'Global Access and Equity',
-                body: 'Offer financial support that scales. FutureReady is built to serve teams in 70+ countries and 80+ languages, with culturally relevant guidance and localized experiences for true financial equity.',
+                label: 'Plan for Life\'s Big Moments',
+                body: 'Step-by-step milestone guides for a first home, student-loan payoff, growing a family, career changes and retirement readiness.',
               },
               {
-                label: 'Flexible Pricing, Proven ROI',
-                body: 'Get financial wellness that works—and works for your budget. Our pricing model scales with your team, delivering up to $2.39 in ROI for every $1 invested.',
+                label: 'Flexible Pricing',
+                body: 'Our pricing model scales with your team. Talk to us about a plan that fits your organization.',
               },
               {
                 label: 'Dedicated Success Team',
@@ -456,16 +460,16 @@ export default function HomePage() {
       </section>
 
       {/* ── HOW IT WORKS ── */}
-      <section className="py-28 px-6" style={{ background: 'var(--white)' }}>
+      <section id="how-it-works" className="py-28 px-6" style={{ background: 'var(--white)' }}>
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-20">
             <p className="font-mono-label mb-6" style={{ color: 'var(--olive)', fontSize: '0.65rem' }}>
               How It Works
             </p>
             <h2 className="headline-lg" style={{ color: 'var(--forest)' }}>
-              Your employees&apos; financial lives,
+              From benefits to milestones,
               <br />
-              <em className="italic-accent">finally supported.</em>
+              <em className="italic-accent">ready for what&apos;s next.</em>
             </h2>
           </div>
 
@@ -473,8 +477,8 @@ export default function HomePage() {
             {[
               {
                 num: '01',
-                title: 'Connect',
-                desc: 'Employees securely link their financial accounts — bank, investments, loans — in minutes. They control exactly what they share.',
+                title: 'Choose a milestone',
+                desc: 'Employees pick the moment they\'re preparing for — a first home, student-loan payoff, growing a family, a career change or retirement.',
                 icon: (
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                     <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
@@ -484,8 +488,8 @@ export default function HomePage() {
               },
               {
                 num: '02',
-                title: 'Understand',
-                desc: 'FutureReady AI analyzes spending patterns, debt, savings gaps, and opportunities — giving each employee a clear picture of where they stand.',
+                title: 'Understand your benefits',
+                desc: 'The Milestone Planner explains the 401(k) match, HSA/FSA and open-enrollment choices that apply to that milestone.',
                 icon: (
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                     <circle cx="11" cy="11" r="8" />
@@ -495,8 +499,8 @@ export default function HomePage() {
               },
               {
                 num: '03',
-                title: 'Plan',
-                desc: 'The AI builds personalized financial plans — emergency funds, debt payoff, retirement, home buying — tailored to each employee\'s goals.',
+                title: 'Plan the steps',
+                desc: 'Employees get an educational, step-by-step checklist for their milestone, with timing tips around open enrollment and life events.',
                 icon: (
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                     <path d="M9 11l3 3L22 4" />
@@ -506,8 +510,8 @@ export default function HomePage() {
               },
               {
                 num: '04',
-                title: 'Grow',
-                desc: 'Employees track progress, ask questions anytime, and build lasting financial habits — while employers see aggregate wellness metrics.',
+                title: 'Stay ready',
+                desc: 'Employees revisit their plan as life changes and ask questions anytime — while employers see aggregate engagement metrics only.',
                 icon: (
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                     <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
@@ -519,13 +523,13 @@ export default function HomePage() {
               <div key={step.num} className="relative">
                 <div
                   className="w-10 h-10 rounded-2xl flex items-center justify-center mb-5"
-                  style={{ background: 'rgba(24,37,27,0.08)', color: 'var(--forest)' }}
+                  style={{ background: 'rgba(61,26,71,0.08)', color: 'var(--forest)' }}
                 >
                   {step.icon}
                 </div>
                 <p
                   className="font-mono-label mb-3"
-                  style={{ color: 'rgba(24,37,27,0.25)', fontSize: '0.65rem' }}
+                  style={{ color: 'rgba(61,26,71,0.25)', fontSize: '0.65rem' }}
                 >
                   {step.num}
                 </p>
@@ -535,12 +539,12 @@ export default function HomePage() {
                 >
                   {step.title}
                 </h3>
-                <p style={{ color: 'rgba(24,37,27,0.6)', fontSize: '0.88rem', lineHeight: 1.7 }}>
+                <p style={{ color: 'rgba(61,26,71,0.6)', fontSize: '0.88rem', lineHeight: 1.7 }}>
                   {step.desc}
                 </p>
                 {i < 3 && (
                   <div className="hidden md:block absolute top-5 -right-3 z-10">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(24,37,27,0.2)" strokeWidth="1.5">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgba(61,26,71,0.2)" strokeWidth="1.5">
                       <path d="M5 12h14M12 5l7 7-7 7" />
                     </svg>
                   </div>
@@ -559,20 +563,20 @@ export default function HomePage() {
               The Experience
             </p>
             <h2 className="headline-lg" style={{ color: 'var(--forest)' }}>
-              A financial advisor
+              A milestone plan
               <br />
-              <em className="italic-accent">in every pocket.</em>
+              <em className="italic-accent">for every employee.</em>
             </h2>
             <p
               style={{
-                color: 'rgba(24,37,27,0.55)',
+                color: 'rgba(61,26,71,0.55)',
                 fontSize: '1rem',
                 lineHeight: 1.8,
                 maxWidth: '440px',
                 margin: '1.5rem auto 0',
               }}
             >
-              Employees get a personalized dashboard and an AI they can ask anything — anytime.
+              Employees get a milestone dashboard and a Milestone Planner for educational guidance — anytime.
             </p>
           </div>
 
@@ -581,16 +585,16 @@ export default function HomePage() {
             {/* Left: Dashboard */}
             <div>
               <p className="font-mono-label mb-4" style={{ color: 'var(--olive)', fontSize: '0.6rem' }}>
-                Financial Dashboard
+                Milestone Dashboard
               </p>
               <p
                 className="headline-md mb-6"
                 style={{ color: 'var(--forest)', fontSize: '1.5rem' }}
               >
-                A clear view of every financial goal
+                A clear view of every milestone
               </p>
-              <p style={{ color: 'rgba(24,37,27,0.55)', fontSize: '0.9rem', lineHeight: 1.75, marginBottom: '2rem' }}>
-                Employees see their net worth, savings progress, debt payoff timeline, and AI-generated insights — all in one calm, organized view.
+              <p style={{ color: 'rgba(61,26,71,0.55)', fontSize: '0.9rem', lineHeight: 1.75, marginBottom: '2rem' }}>
+                Employees see the next milestone they&apos;re preparing for, the benefit steps that matter, and what to do next — all in one calm, organized view. Sample dashboard shown for illustration.
               </p>
               <div className="animate-float">
                 <DashboardMockup />
@@ -600,16 +604,16 @@ export default function HomePage() {
             {/* Right: AI Chat */}
             <div>
               <p className="font-mono-label mb-4" style={{ color: 'var(--olive)', fontSize: '0.6rem' }}>
-                AI Financial Advisor
+                Milestone Planner
               </p>
               <p
                 className="headline-md mb-6"
                 style={{ color: 'var(--forest)', fontSize: '1.5rem' }}
               >
-                Ask anything. Get real answers.
+                Ask a question. Get a clear next step.
               </p>
-              <p style={{ color: 'rgba(24,37,27,0.55)', fontSize: '0.9rem', lineHeight: 1.75, marginBottom: '2rem' }}>
-                FutureReady AI understands each employee&apos;s unique financial situation and gives personalized, actionable guidance — not generic advice.
+              <p style={{ color: 'rgba(61,26,71,0.55)', fontSize: '0.9rem', lineHeight: 1.75, marginBottom: '2rem' }}>
+                The Milestone Planner gives educational guidance on benefits and life milestones. It does not provide investment, tax or legal advice.
               </p>
               <div className="animate-float-delay">
                 <ChatMockup />
@@ -628,18 +632,18 @@ export default function HomePage() {
                 For Employers
               </p>
               <h2 className="headline-lg text-white mb-6">
-                Smarter savings for your team.
+                Help your team get more
                 <br />
-                <em className="italic-accent">Without more overhead.</em>
+                <em className="italic-accent">from the benefits you offer.</em>
               </h2>
               <p style={{ color: 'rgba(245,243,235,0.65)', fontSize: '1rem', lineHeight: 1.8, marginBottom: '2.5rem' }}>
-                Launch a financial wellness benefit your employees will actually use. FutureReady handles everything — from onboarding to engagement — while you see aggregate impact metrics.
+                Launch a benefit your employees will actually use. FutureReady helps them understand and use the benefits you already provide, from onboarding to open enrollment, while you see aggregate engagement metrics.
               </p>
               <div className="space-y-5">
                 {[
                   { title: 'Simple rollout', desc: 'Deploy to your entire workforce in days, not months.' },
                   { title: 'Privacy by design', desc: 'Employers see aggregate data only. Individual finances stay private.' },
-                  { title: 'Measurable ROI', desc: 'Track engagement, satisfaction, and financial health improvements.' },
+                  { title: 'Benefit engagement', desc: 'See how employees engage with benefits education and milestone planning.' },
                 ].map(item => (
                   <div key={item.title} className="flex items-start gap-4">
                     <div
@@ -679,24 +683,24 @@ export default function HomePage() {
                 <div className="flex items-center justify-between mb-6">
                   <div>
                     <p className="font-mono-label" style={{ color: 'rgba(245,243,235,0.4)', fontSize: '0.6rem' }}>
-                      Employer Dashboard
+                      Sample dashboard
                     </p>
-                    <p style={{ color: 'var(--ivory)', fontWeight: 600, marginTop: '0.25rem' }}>Q3 Wellness Overview</p>
+                    <p style={{ color: 'var(--ivory)', fontWeight: 600, marginTop: '0.25rem' }}>Benefits Engagement Overview</p>
                   </div>
                   <div
                     className="px-3 py-1 rounded-full font-mono-label"
-                    style={{ background: 'rgba(126,200,160,0.2)', color: '#7EC8A0', fontSize: '0.6rem' }}
+                    style={{ background: 'rgba(232,163,61,0.2)', color: 'var(--ivory)', fontSize: '0.6rem' }}
                   >
-                    Live
+                    Example
                   </div>
                 </div>
 
                 <div className="grid grid-cols-2 gap-3 mb-6">
                   {[
-                    { label: 'Active Employees', value: '847', change: '+12%' },
-                    { label: 'Avg. Financial Score', value: '72', change: '+8 pts' },
-                    { label: 'Goals Set', value: '2,341', change: 'this quarter' },
-                    { label: 'Program Engagement', value: '91%', change: '+5%' },
+                    { label: 'Active Employees', value: '847', change: 'example data' },
+                    { label: 'Milestone Plans Started', value: '412', change: 'example data' },
+                    { label: 'Open Enrollment Guides Viewed', value: '2,341', change: 'example data' },
+                    { label: 'Program Engagement', value: '68%', change: 'example data' },
                   ].map(stat => (
                     <div
                       key={stat.label}
@@ -709,16 +713,16 @@ export default function HomePage() {
                       <p style={{ color: 'var(--ivory)', fontSize: '1.5rem', fontWeight: 700, letterSpacing: '-0.02em' }}>
                         {stat.value}
                       </p>
-                      <p style={{ color: '#7EC8A0', fontSize: '0.72rem', marginTop: '0.2rem' }}>{stat.change}</p>
+                      <p style={{ color: 'rgba(245,243,235,0.6)', fontSize: '0.72rem', marginTop: '0.2rem' }}>{stat.change}</p>
                     </div>
                   ))}
                 </div>
 
                 <div
                   className="rounded-xl p-4 flex items-start gap-3"
-                  style={{ background: 'rgba(126,200,160,0.1)', border: '1px solid rgba(126,200,160,0.2)' }}
+                  style={{ background: 'rgba(232,163,61,0.1)', border: '1px solid rgba(232,163,61,0.2)' }}
                 >
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7EC8A0" strokeWidth="2" className="flex-shrink-0 mt-0.5">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E8A33D" strokeWidth="2" className="flex-shrink-0 mt-0.5">
                     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                   </svg>
                   <p style={{ color: 'rgba(245,243,235,0.7)', fontSize: '0.75rem', lineHeight: 1.5 }}>
@@ -740,18 +744,18 @@ export default function HomePage() {
           <h2 className="headline-lg mb-8" style={{ color: 'var(--forest)' }}>
             Help your employees
             <br />
-            <em className="italic-accent">build their financial future.</em>
+            <em className="italic-accent">get ready for what&apos;s next.</em>
           </h2>
           <p
             style={{
-              color: 'rgba(24,37,27,0.55)',
+              color: 'rgba(61,26,71,0.55)',
               fontSize: '1rem',
               lineHeight: 1.8,
               maxWidth: '420px',
               margin: '0 auto 2.5rem',
             }}
           >
-            Join companies building financially secure, confident, and resilient workforces with FutureReady.
+            Offer a benefit that helps employees use what they already have and plan for the moments ahead.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Link href="/talk-to-sales" className="btn-forest">
@@ -760,7 +764,7 @@ export default function HomePage() {
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
             </Link>
-            <Link href="/for-employers" className="btn-outline" style={{ color: 'var(--forest)', borderColor: 'rgba(24,37,27,0.3)' }}>
+            <Link href="/for-employers" className="btn-outline" style={{ color: 'var(--forest)', borderColor: 'rgba(61,26,71,0.3)' }}>
               For Employers
             </Link>
           </div>

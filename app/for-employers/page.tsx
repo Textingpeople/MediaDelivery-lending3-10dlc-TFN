@@ -21,10 +21,10 @@ export default function ForEmployersPage() {
           <h1 className="headline-xl text-white mb-8">
             <em className="italic-accent">Why</em> employers choose
             <br />
-            Verdant Finance
+            FutureReady
           </h1>
           <p style={{ color: 'rgba(245,243,235,0.65)', fontSize: '1.1rem', lineHeight: 1.8, maxWidth: '520px', margin: '0 auto 2.5rem' }}>
-            Trusted by forward-thinking companies to deliver measurable impact in employee financial wellness.
+            An employer-offered benefit that helps employees understand the benefits you already provide and plan for life milestones.
           </p>
           <Link href="/talk-to-sales" className="btn-primary">
             Get Started
@@ -47,7 +47,7 @@ export default function ForEmployersPage() {
                   </svg>
                 ),
                 title: 'Privacy by design',
-                desc: 'Employers see only aggregate wellness trends — never individual employee financial data.',
+                desc: 'Employers see only aggregate engagement trends — never individual employee data.',
               },
               {
                 icon: (
@@ -59,7 +59,7 @@ export default function ForEmployersPage() {
                   </svg>
                 ),
                 title: 'Built for every team',
-                desc: 'From 10 employees to 10,000 — Verdant Finance scales with your organization and adapts to every workforce.',
+                desc: 'FutureReady scales with your organization and adapts to every workforce.',
               },
               {
                 icon: (
@@ -68,8 +68,8 @@ export default function ForEmployersPage() {
                     <polyline points="16 7 22 7 22 13" />
                   </svg>
                 ),
-                title: 'Measurable impact',
-                desc: 'Track engagement, financial wellness scores, and program adoption — with clear reporting for leadership.',
+                title: 'Benefit engagement',
+                desc: 'Track engagement and program adoption — with clear aggregate reporting for leadership.',
               },
             ].map((pillar, i) => (
               <div key={i} className="flex items-start gap-4">
@@ -98,7 +98,7 @@ export default function ForEmployersPage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <p className="font-mono-label mb-6" style={{ color: 'var(--olive)', fontSize: '0.65rem' }}>
-              Why Verdant Finance
+              Why FutureReady
             </p>
             <h2 className="headline-lg" style={{ color: 'var(--forest)' }}>
               Built for the way
@@ -110,16 +110,16 @@ export default function ForEmployersPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               {
-                label: 'One Platform for Every Employee',
-                body: 'Support every financial journey—budgeting, investing, planning, and more—with a single, unified platform. Verdant Finance meets employees where they are, no matter their income, location, or life stage.',
+                label: 'Get More From Your Benefits',
+                body: 'Help employees understand the 401(k) match, HSA/FSA options and open enrollment you already offer, so more of them use what is available to them.',
               },
               {
-                label: 'Global Access and Equity',
-                body: 'Offer financial support that scales. Verdant Finance is built to serve teams in 70+ countries and 80+ languages, with culturally relevant guidance and localized experiences for true financial equity.',
+                label: 'Support Life\'s Big Moments',
+                body: 'Milestone guides for a first home, student-loan payoff, growing a family, career changes and retirement readiness — for employees at every life stage.',
               },
               {
-                label: 'Flexible Pricing, Proven ROI',
-                body: 'Get financial wellness that works—and works for your budget. Our pricing model scales with your team, delivering up to $2.39 in ROI for every $1 invested.',
+                label: 'Flexible Pricing',
+                body: 'Our pricing model scales with your team. Talk to us about a plan that fits your organization.',
               },
               {
                 label: 'Dedicated Success Team',
@@ -158,27 +158,27 @@ export default function ForEmployersPage() {
               {
                 num: '01',
                 title: 'Set Up Your Program',
-                desc: 'Work with our success team to configure your financial wellness program. Choose your benefit tier, set up your company profile, and define your rollout plan.',
+                desc: 'Work with our success team to configure your benefits program. Choose your benefit tier, set up your company profile, and define your rollout plan.',
               },
               {
                 num: '02',
                 title: 'Invite Your Employees',
-                desc: 'Send a simple invite link or integrate with your existing HR systems. Employees sign up in minutes and immediately access their personalized financial dashboard.',
+                desc: 'Send a simple invite link or integrate with your existing HR systems. Employees sign up in minutes and immediately access their milestone dashboard.',
               },
               {
                 num: '03',
                 title: 'Track Impact',
-                desc: 'Monitor aggregate engagement, satisfaction scores, and financial wellness trends from your employer dashboard — while individual employee data stays completely private.',
+                desc: 'Monitor aggregate engagement and adoption trends from your employer dashboard — while individual employee data stays completely private.',
               },
             ].map((step, i) => (
               <div key={step.num}>
-                <p className="font-mono-label mb-4" style={{ color: 'rgba(24,37,27,0.25)', fontSize: '0.65rem' }}>
+                <p className="font-mono-label mb-4" style={{ color: 'rgba(61,26,71,0.25)', fontSize: '0.65rem' }}>
                   {step.num}
                 </p>
                 <h3 className="font-serif mb-3" style={{ fontSize: '1.2rem', fontWeight: 600, color: 'var(--forest)' }}>
                   {step.title}
                 </h3>
-                <p style={{ color: 'rgba(24,37,27,0.6)', fontSize: '0.9rem', lineHeight: 1.75 }}>
+                <p style={{ color: 'rgba(61,26,71,0.6)', fontSize: '0.9rem', lineHeight: 1.75 }}>
                   {step.desc}
                 </p>
               </div>
@@ -201,15 +201,15 @@ export default function ForEmployersPage() {
                 <em className="italic-accent">actually matters.</em>
               </h2>
               <p style={{ color: 'rgba(245,243,235,0.65)', fontSize: '1rem', lineHeight: 1.8, marginBottom: '2.5rem' }}>
-                See aggregate financial wellness trends across your workforce. Understand program engagement, track improvement over time, and demonstrate ROI to leadership — all without ever seeing individual employee data.
+                See aggregate engagement trends across your workforce. Understand program adoption and track change over time — all without ever seeing individual employee data.
               </p>
               <div className="space-y-4">
                 {[
-                  'Aggregate financial wellness scores',
                   'Program engagement and adoption rates',
-                  'Goal completion trends',
-                  'Satisfaction and NPS tracking',
-                  'ROI reporting for leadership',
+                  'Milestone plans started',
+                  'Open enrollment guide usage',
+                  'Benefit topics employees explore most',
+                  'Aggregate reporting for leadership',
                 ].map(item => (
                   <div key={item} className="flex items-center gap-3">
                     <div
@@ -234,24 +234,24 @@ export default function ForEmployersPage() {
               <div className="flex items-center justify-between mb-6">
                 <div>
                   <p className="font-mono-label" style={{ color: 'rgba(245,243,235,0.4)', fontSize: '0.6rem' }}>
-                    Employer Dashboard
+                    Sample dashboard
                   </p>
-                  <p style={{ color: 'var(--ivory)', fontWeight: 600, marginTop: '0.25rem' }}>Q3 Wellness Overview</p>
+                  <p style={{ color: 'var(--ivory)', fontWeight: 600, marginTop: '0.25rem' }}>Benefits Engagement Overview</p>
                 </div>
                 <div
                   className="px-3 py-1 rounded-full font-mono-label"
-                  style={{ background: 'rgba(126,200,160,0.2)', color: '#7EC8A0', fontSize: '0.6rem' }}
+                  style={{ background: 'rgba(232,163,61,0.2)', color: 'var(--ivory)', fontSize: '0.6rem' }}
                 >
-                  Live
+                  Example
                 </div>
               </div>
 
               <div className="grid grid-cols-2 gap-3 mb-6">
                 {[
-                  { label: 'Active Employees', value: '847', change: '+12%' },
-                  { label: 'Avg. Financial Score', value: '72', change: '+8 pts' },
-                  { label: 'Goals Set', value: '2,341', change: 'this quarter' },
-                  { label: 'Program Engagement', value: '91%', change: '+5%' },
+                  { label: 'Active Employees', value: '847', change: 'example data' },
+                  { label: 'Milestone Plans Started', value: '412', change: 'example data' },
+                  { label: 'Open Enrollment Guides Viewed', value: '2,341', change: 'example data' },
+                  { label: 'Program Engagement', value: '68%', change: 'example data' },
                 ].map(stat => (
                   <div key={stat.label} className="rounded-xl p-4" style={{ background: 'rgba(245,243,235,0.05)' }}>
                     <p className="font-mono-label mb-2" style={{ color: 'rgba(245,243,235,0.35)', fontSize: '0.55rem' }}>
@@ -260,16 +260,16 @@ export default function ForEmployersPage() {
                     <p style={{ color: 'var(--ivory)', fontSize: '1.5rem', fontWeight: 700, letterSpacing: '-0.02em' }}>
                       {stat.value}
                     </p>
-                    <p style={{ color: '#7EC8A0', fontSize: '0.72rem', marginTop: '0.2rem' }}>{stat.change}</p>
+                    <p style={{ color: 'rgba(245,243,235,0.6)', fontSize: '0.72rem', marginTop: '0.2rem' }}>{stat.change}</p>
                   </div>
                 ))}
               </div>
 
               <div
                 className="rounded-xl p-4 flex items-start gap-3"
-                style={{ background: 'rgba(126,200,160,0.1)', border: '1px solid rgba(126,200,160,0.2)' }}
+                style={{ background: 'rgba(232,163,61,0.1)', border: '1px solid rgba(232,163,61,0.2)' }}
               >
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7EC8A0" strokeWidth="2" className="flex-shrink-0 mt-0.5">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E8A33D" strokeWidth="2" className="flex-shrink-0 mt-0.5">
                   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                 </svg>
                 <p style={{ color: 'rgba(245,243,235,0.7)', fontSize: '0.75rem', lineHeight: 1.5 }}>
@@ -288,12 +288,12 @@ export default function ForEmployersPage() {
             Get Started
           </p>
           <h2 className="headline-lg mb-8" style={{ color: 'var(--forest)' }}>
-            Build a financially
+            Help your people
             <br />
-            <em className="italic-accent">resilient workforce.</em>
+            <em className="italic-accent">get ready for what&apos;s next.</em>
           </h2>
-          <p style={{ color: 'rgba(24,37,27,0.55)', fontSize: '1rem', lineHeight: 1.8, maxWidth: '420px', margin: '0 auto 2.5rem' }}>
-            Join companies delivering measurable financial wellness impact with Verdant Finance.
+          <p style={{ color: 'rgba(61,26,71,0.55)', fontSize: '1rem', lineHeight: 1.8, maxWidth: '420px', margin: '0 auto 2.5rem' }}>
+            Offer a benefit that helps employees use what they already have and plan for the moments ahead.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Link href="/talk-to-sales" className="btn-forest">
@@ -302,7 +302,7 @@ export default function ForEmployersPage() {
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
             </Link>
-            <Link href="/product" className="btn-outline" style={{ color: 'var(--forest)', borderColor: 'rgba(24,37,27,0.3)' }}>
+            <Link href="/product" className="btn-outline" style={{ color: 'var(--forest)', borderColor: 'rgba(61,26,71,0.3)' }}>
               See the Product
             </Link>
           </div>
