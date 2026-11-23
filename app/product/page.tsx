@@ -192,17 +192,17 @@ export default function ProductPage() {
                   </svg>
                 </div>
                 <div>
-                  <p style={{ fontWeight: 600, color: 'var(--forest)', fontSize: '0.9rem' }}>Your Financial Data</p>
+                  <p style={{ fontWeight: 600, color: 'var(--forest)', fontSize: '0.9rem' }}>Your Plan Details</p>
                   <p className="font-mono-label" style={{ color: 'var(--olive)', fontSize: '0.6rem' }}>You control what you share</p>
                 </div>
               </div>
 
               <div className="space-y-3">
                 {[
-                  { label: 'Milestone selections', connected: true },
-                  { label: 'Benefit elections', connected: true },
-                  { label: 'Plan checklists', connected: true },
-                  { label: 'Retirement accounts', connected: false },
+                  { label: 'Milestone selections', shared: true },
+                  { label: 'Benefit elections', shared: true },
+                  { label: 'Plan checklists', shared: true },
+                  { label: 'Reminder preferences', shared: false },
                 ].map(item => (
                   <div
                     key={item.label}
@@ -210,14 +210,20 @@ export default function ProductPage() {
                     style={{ background: 'rgba(61,26,71,0.04)', border: '1px solid rgba(61,26,71,0.08)' }}
                   >
                     <span style={{ fontSize: '0.85rem', color: 'var(--charcoal)', fontWeight: 500 }}>{item.label}</span>
-                    <div
-                      className="w-9 h-5 rounded-full flex items-center px-0.5 transition-all"
-                      style={{ background: item.connected ? 'var(--olive)' : 'rgba(61,26,71,0.15)' }}
-                    >
+                    <div className="flex items-center gap-2">
+                      <span className="font-mono-label" style={{ color: 'rgba(61,26,71,0.6)', fontSize: '0.55rem' }}>
+                        {item.shared ? 'On' : 'Off'}
+                      </span>
                       <div
-                        className="w-4 h-4 bg-white rounded-full shadow-sm transition-all"
-                        style={{ transform: item.connected ? 'translateX(16px)' : 'translateX(0)' }}
-                      />
+                        className="w-9 h-5 rounded-full flex items-center px-0.5 transition-all"
+                        style={{ background: item.shared ? 'var(--olive)' : 'rgba(61,26,71,0.15)' }}
+                        aria-hidden="true"
+                      >
+                        <div
+                          className="w-4 h-4 bg-white rounded-full shadow-sm transition-all"
+                          style={{ transform: item.shared ? 'translateX(16px)' : 'translateX(0)' }}
+                        />
+                      </div>
                     </div>
                   </div>
                 ))}
