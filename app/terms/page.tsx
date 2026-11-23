@@ -50,7 +50,7 @@ export default function TermsPage() {
               <ul className="list-disc pl-6 space-y-2">
                 <li>A milestone dashboard showing the life milestones you are preparing for and the benefit steps that matter for each</li>
                 <li>Milestone Planner — a tool that provides educational guidance about your benefits (such as 401(k) match, HSA/FSA and open enrollment) and life milestones</li>
-                <li>Planning checklists for a first home, student-loan payoff, growing a family, career changes and retirement readiness</li>
+                <li>Planning checklists for a first home, going back to school, growing a family, career changes and retirement readiness</li>
                 <li>SMS reminders and notifications (for users who opt in)</li>
                 <li>Employer-connected benefit program participation</li>
               </ul>

@@ -7,13 +7,13 @@ import Footer from '../components/Footer';
 const milestones = [
   {
     title: 'First home',
-    desc: 'Understand the steps before buying: reviewing your credit report, planning for a down payment and closing costs, and checking which benefits may help.',
-    steps: ['Review your credit report', 'Learn how down payments and closing costs work', 'Check for employer or HSA-related benefits that may apply'],
+    desc: 'Understand the steps before buying: planning for a down payment and closing costs, and checking which employer benefits may help.',
+    steps: ['Learn how down payments and closing costs work', 'Ask HR which home-buying or relocation benefits are offered', 'Check how an HSA or FSA fits your plans'],
   },
   {
-    title: 'Student-loan payoff',
-    desc: 'Learn the common payoff approaches and whether an employer student-loan benefit is available to you.',
-    steps: ['List your loans and servicers', 'Compare common payoff approaches', 'Ask HR about employer student-loan benefits'],
+    title: 'Going back to school',
+    desc: 'Learn about the tuition assistance and education benefits your employer may offer before you enroll.',
+    steps: ['Ask HR whether tuition assistance is offered', 'Learn the eligibility rules and approval steps', 'Review how education benefits fit with your other benefits'],
   },
   {
     title: 'Growing a family',

@@ -74,7 +74,7 @@ export default function ProductPage() {
               },
               {
                 title: 'Milestone Plans',
-                desc: 'Step-by-step plans for a first home, student-loan payoff, growing a family, a career change or retirement readiness. Employees can revisit their plan as life changes.',
+                desc: 'Step-by-step plans for a first home, going back to school, growing a family, a career change or retirement readiness. Employees can revisit their plan as life changes.',
                 icon: (
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                     <path d="M9 11l3 3L22 4" />
@@ -93,8 +93,8 @@ export default function ProductPage() {
                 ),
               },
               {
-                title: 'Student-Loan Payoff Planning',
-                desc: 'Educational guides to common student-loan payoff approaches, plus whether an employer student-loan benefit may be available, so employees can plan the road to payoff.',
+                title: 'Education Benefits Planning',
+                desc: 'Educational guides to employer tuition assistance and other education benefits, plus how to ask HR what is available, so employees can plan for going back to school.',
                 icon: (
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                     <circle cx="12" cy="12" r="10" />
@@ -203,7 +203,6 @@ export default function ProductPage() {
                   { label: 'Benefit elections', connected: true },
                   { label: 'Plan checklists', connected: true },
                   { label: 'Retirement accounts', connected: false },
-                  { label: 'Credit score', connected: false },
                 ].map(item => (
                   <div
                     key={item.label}

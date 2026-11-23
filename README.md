@@ -2,7 +2,7 @@
 
 **Get ready for what's next.**
 
-FutureReady is an employer-offered benefit that helps employees understand and use the benefits they already have (401(k) match, HSA/FSA, open enrollment) and plan for big life moments: a first home, student-loan payoff, growing a family, career changes and retirement readiness. The Milestone Planner gives educational guidance.
+FutureReady is an employer-offered benefit that helps employees understand and use the benefits they already have (401(k) match, HSA/FSA, open enrollment) and plan for big life moments: a first home, going back to school, growing a family, career changes and retirement readiness. The Milestone Planner gives educational guidance.
 
 FutureReady is operated by Media Delivery Solutions LLC, a Wyoming limited liability company, d/b/a FutureReady.
 9 Johnston Dr, Bloomsbury, NJ 08804, United States · (908) 399-8307 · support@getfuturereadynow.com

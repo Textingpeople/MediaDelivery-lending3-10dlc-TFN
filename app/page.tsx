@@ -62,7 +62,7 @@ function DashboardMockup() {
       <div className="space-y-3 mb-4">
         {[
           { label: 'Claim the full 401(k) match', pct: 80, color: '#8E4585' },
-          { label: 'Student-loan payoff plan', pct: 60, color: '#3D1A47' },
+          { label: 'Education benefits plan', pct: 60, color: '#3D1A47' },
           { label: 'HSA / FSA elections reviewed', pct: 100, color: '#8E4585' },
         ].map(g => (
           <div key={g.label}>
@@ -107,7 +107,7 @@ function ChatMockup() {
     { role: 'user', text: 'I want to buy a home in a few years. What should I look at in my benefits first?' },
     { role: 'ai', text: 'A good first step is checking whether you\'re contributing enough to get your employer\'s full 401(k) match, since that\'s part of your compensation. Next, see whether an HSA or FSA fits your expected health costs. Open enrollment is a natural time to review both.' },
     { role: 'user', text: 'What else should I plan for before buying?' },
-    { role: 'ai', text: 'Many first-time buyers review their student-loan payoff timeline, their credit report and the cost of a down payment. I can walk you through each as a checklist. This is general education, not personalized advice.' },
+    { role: 'ai', text: 'Many first-time buyers plan for the cost of a down payment and closing costs, and check which employer benefits may help. I can walk you through each as a checklist. This is general education, not personalized advice.' },
   ];
 
   return (
@@ -280,7 +280,7 @@ export default function HomePage() {
                 marginBottom: '2.5rem',
               }}
             >
-              FutureReady helps employees understand and use the benefits they already have — 401(k) match, HSA/FSA, open enrollment — and plan for big moments like a first home, student-loan payoff, growing a family, career changes and retirement.
+              FutureReady helps employees understand and use the benefits they already have — 401(k) match, HSA/FSA, open enrollment — and plan for big moments like a first home, going back to school, growing a family, career changes and retirement.
             </p>
 
             {/* CTAs */}
@@ -326,7 +326,7 @@ export default function HomePage() {
 
             {/* Milestones */}
             <div className="flex flex-wrap items-center gap-2 mt-12">
-              {['First home', 'Student-loan payoff', 'Growing a family', 'Career changes', 'Retirement readiness'].map(m => (
+              {['First home', 'Going back to school', 'Growing a family', 'Career changes', 'Retirement readiness'].map(m => (
                 <span
                   key={m}
                   style={{
@@ -428,7 +428,7 @@ export default function HomePage() {
               },
               {
                 label: 'Plan for Life\'s Big Moments',
-                body: 'Step-by-step milestone guides for a first home, student-loan payoff, growing a family, career changes and retirement readiness.',
+                body: 'Step-by-step milestone guides for a first home, going back to school, growing a family, career changes and retirement readiness.',
               },
               {
                 label: 'Flexible Pricing',
@@ -478,7 +478,7 @@ export default function HomePage() {
               {
                 num: '01',
                 title: 'Choose a milestone',
-                desc: 'Employees pick the moment they\'re preparing for — a first home, student-loan payoff, growing a family, a career change or retirement.',
+                desc: 'Employees pick the moment they\'re preparing for — a first home, going back to school, growing a family, a career change or retirement.',
                 icon: (
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                     <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />

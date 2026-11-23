@@ -259,6 +259,9 @@ export default function ContactPage() {
                     <br />
                     Message and data rates may apply.
                   </p>
+                  <p style={{ color: 'var(--charcoal)', fontSize: '0.9rem', lineHeight: 1.7, marginTop: '0.75rem' }}>
+                    No mobile information will be shared with third parties or affiliates for marketing or promotional purposes. Text messaging originator opt-in data and consent will not be shared with any third parties.
+                  </p>
                 </div>
 
                 {/* Divider */}
@@ -270,7 +273,7 @@ export default function ContactPage() {
                     {[
                       {
                         q: 'How do I opt out of SMS?',
-                        a: 'Reply STOP to any message. You\'ll be removed immediately.',
+                        a: 'Reply STOP to any message. You\'ll receive a one-time confirmation and no further messages will be sent. Reply START to rejoin.',
                       },
                       {
                         q: 'Will my information be shared?',

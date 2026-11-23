@@ -115,7 +115,7 @@ export default function ForEmployersPage() {
               },
               {
                 label: 'Support Life\'s Big Moments',
-                body: 'Milestone guides for a first home, student-loan payoff, growing a family, career changes and retirement readiness — for employees at every life stage.',
+                body: 'Milestone guides for a first home, going back to school, growing a family, career changes and retirement readiness — for employees at every life stage.',
               },
               {
                 label: 'Flexible Pricing',

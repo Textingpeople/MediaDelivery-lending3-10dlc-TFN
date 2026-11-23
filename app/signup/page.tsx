@@ -59,6 +59,7 @@ export default function SignupPage() {
   const [formData, setFormData] = useState({ name: '', email: '', employerId: '', phone: '' });
   const [emailError, setEmailError] = useState('');
   const [employerIdError, setEmployerIdError] = useState('');
+  const [phoneError, setPhoneError] = useState('');
   const [validEmployerId, setValidEmployerId] = useState('');
   const [accountNotifications, setAccountNotifications] = useState(false);
   const [customerCare, setCustomerCare] = useState(false);
@@ -78,6 +79,7 @@ export default function SignupPage() {
     setFormData({ ...formData, [name]: value });
     if (name === 'email') setEmailError('');
     if (name === 'employerId') setEmployerIdError('');
+    if (name === 'phone') setPhoneError('');
   };
 
   const handleStep1Continue = () => {
@@ -99,6 +101,12 @@ export default function SignupPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    // A mobile number is only required when the user opts in to at least one SMS message type.
+    if ((accountNotifications || customerCare) && !formData.phone.trim()) {
+      setPhoneError('Enter a mobile number to receive text messages.');
+      return;
+    }
+    setPhoneError('');
     setIsSubmitting(true);
     setTimeout(() => {
       setIsSubmitting(false);
@@ -398,27 +406,32 @@ export default function SignupPage() {
                     {/* Phone */}
                     <div className="mb-5">
                       <label className="font-mono-label block mb-2" style={{ color: 'var(--olive)', fontSize: '0.6rem' }}>
-                        Mobile Phone Number *
+                        Mobile phone number (required only if you choose text messages)
                       </label>
                       <input
                         type="tel"
                         name="phone"
-                        required
                         value={formData.phone}
                         onChange={handleChange}
                         placeholder="(555) 555-5555"
                         className="w-full px-4 py-3 rounded-xl text-sm"
+                        aria-invalid={phoneError ? true : undefined}
+                        aria-describedby={phoneError ? 'phone-error' : undefined}
                         style={{
                           background: 'rgba(61,26,71,0.04)',
-                          border: '1px solid rgba(61,26,71,0.12)',
+                          border: `1px solid ${phoneError ? '#dc2626' : 'rgba(61,26,71,0.12)'}`,
                           color: 'var(--charcoal)',
                           outline: 'none',
                           fontFamily: 'Inter, sans-serif',
                         }}
                       />
-                      <p style={{ fontSize: '0.7rem', color: 'rgba(61,26,71,0.4)', marginTop: '0.4rem' }}>
-                        This is the number the Milestone Planner will use to send you reminders.
-                      </p>
+                      {phoneError ? (
+                        <p id="phone-error" role="alert" style={{ fontSize: '0.72rem', color: '#dc2626', marginTop: '0.4rem' }}>{phoneError}</p>
+                      ) : (
+                        <p style={{ fontSize: '0.7rem', color: 'rgba(61,26,71,0.4)', marginTop: '0.4rem' }}>
+                          We&apos;ll only text this number if you check one of the boxes below.
+                        </p>
+                      )}
                     </div>
 
                     {/* Terms */}
@@ -443,7 +456,7 @@ export default function SignupPage() {
                           type="checkbox"
                           id="accountNotifications"
                           checked={accountNotifications}
-                          onChange={e => setAccountNotifications(e.target.checked)}
+                          onChange={e => { setAccountNotifications(e.target.checked); setPhoneError(''); }}
                           className="mt-1 w-4 h-4 rounded flex-shrink-0"
                           style={{ accentColor: 'var(--olive)' }}
                         />
@@ -459,7 +472,7 @@ export default function SignupPage() {
                           type="checkbox"
                           id="customerCare"
                           checked={customerCare}
-                          onChange={e => setCustomerCare(e.target.checked)}
+                          onChange={e => { setCustomerCare(e.target.checked); setPhoneError(''); }}
                           className="mt-1 w-4 h-4 rounded flex-shrink-0"
                           style={{ accentColor: 'var(--olive)' }}
                         />
